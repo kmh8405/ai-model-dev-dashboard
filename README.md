@@ -1,6 +1,6 @@
 # AI 모델 도메인별 강점 대시보드
 
-개발자 페르소나를 위한 AI 모델 성능 비교 대시보드입니다. Overall / Coding / Math 세 카테고리에서 최신 AI 모델(Claude, GPT, Gemini 등 32개)의 Arena Score를 비교하고, 모델별로 카테고리 간 순위 변화를 확인할 수 있습니다.
+개발자 페르소나를 위한 AI 모델 성능 비교 대시보드입니다. Overall / Coding / Math 세 카테고리에서 최신 AI 모델(Claude, GPT, Gemini 등)의 Arena Score를 비교하고, 모델별로 카테고리 간 순위 변화를 확인할 수 있습니다. 각 카테고리 상위 20개 모델을 기준으로 하며, 데이터가 매일 자동 갱신되기 때문에 카테고리 간 중복을 제외한 전체 모델 수는 시점마다 달라질 수 있습니다.
 
 🔗 **[대시보드 바로가기](https://kmh8405.github.io/ai-model-dev-dashboard/)**
 
@@ -29,6 +29,12 @@
 이 Supabase 프로젝트는 다른 대시보드(hcp-roi-dashboard)와 같은 프로젝트를 공유하며, 테이블만 분리되어 있습니다. Supabase 접속 정보는 이 저장소의 `Settings → Secrets and variables → Actions`에 `DATABASE_URL`로 등록되어 있습니다.
 
 즉시 갱신이 필요하면 저장소 `Actions` 탭 → `Refresh dashboard data` → `Run workflow`로 수동 실행할 수 있습니다.
+
+### 갱신 지연에 대해
+
+원본 데이터셋(`lmarena-ai/leaderboard-dataset`)은 대략 하루 한 번, UTC 03:01(한국시간 12:01)경에 갱신됩니다. 반면 이 저장소의 크론은 UTC 21:00(한국시간 06:00)에 실행되므로, 두 시각이 어긋나 있어 최악의 경우 원본이 갱신된 후 최대 하루 가까이 지연되어 반영될 수 있습니다.
+
+Hugging Face 웹훅으로 원본이 갱신되는 즉시 반영하는 것도 가능하지만, 이를 위해서는 웹훅을 받아 GitHub에 전달할 별도의 중계 서버(예: Cloudflare Worker)를 새로 호스팅·관리해야 합니다. 비용/관리 포인트를 최소화하는 것이 이 파이프라인의 설계 원칙이라, 현재는 폴링(하루 1회 크론) 방식을 유지하고 있습니다. 최신 데이터가 바로 필요하면 위의 수동 `Run workflow` 실행으로 대신합니다.
 
 ## 로컬 실행
 
