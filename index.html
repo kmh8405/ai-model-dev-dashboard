@@ -106,74 +106,7 @@
 </div>
 
 <script>
-const categories = {
-  overall: [
-    {rank:1,model_name:"claude-opus-4-6-thinking",organization:"anthropic",rating:1500.85,vote_count:55102},
-    {rank:2,model_name:"claude-opus-4-6",organization:"anthropic",rating:1498.09,vote_count:58565},
-    {rank:3,model_name:"claude-fable-5",organization:"anthropic",rating:1494.95,vote_count:4350},
-    {rank:4,model_name:"claude-opus-4-7-thinking",organization:"anthropic",rating:1489.18,vote_count:41868},
-    {rank:5,model_name:"gemini-3.5-flash",organization:"google",rating:1482.35,vote_count:15261},
-    {rank:6,model_name:"claude-opus-4-7",organization:"anthropic",rating:1482.01,vote_count:43053},
-    {rank:7,model_name:"gemini-3.1-pro-preview",organization:"google",rating:1479.57,vote_count:73099},
-    {rank:8,model_name:"gemini-3-pro",organization:"google",rating:1479.43,vote_count:41306},
-    {rank:9,model_name:"qwen3.7-max-preview",organization:"alibaba",rating:1475.13,vote_count:3727},
-    {rank:10,model_name:"muse-spark",organization:"meta",rating:1472.52,vote_count:13591},
-    {rank:11,model_name:"qwen3.5-max-preview",organization:"alibaba",rating:1470.23,vote_count:21531},
-    {rank:12,model_name:"gpt-5.4-high",organization:"openai",rating:1469.68,vote_count:50378},
-    {rank:13,model_name:"gpt-5.5-high",organization:"openai",rating:1468.57,vote_count:37260},
-    {rank:14,model_name:"glm-5.1",organization:"zai",rating:1467.10,vote_count:22689},
-    {rank:15,model_name:"ernie-5.1",organization:"baidu",rating:1466.98,vote_count:32742},
-    {rank:16,model_name:"gemini-3-flash",organization:"google",rating:1466.22,vote_count:30711},
-    {rank:17,model_name:"glm-5.2 (max)",organization:"zai",rating:1463.45,vote_count:9338},
-    {rank:18,model_name:"gpt-5.5",organization:"openai",rating:1463.08,vote_count:38470},
-    {rank:19,model_name:"claude-opus-4-8-thinking",organization:"anthropic",rating:1462.65,vote_count:22340},
-    {rank:20,model_name:"mimo-v2.5-pro",organization:"xiaomi",rating:1462.44,vote_count:34468}
-  ],
-  coding: [
-    {rank:1,model_name:"claude-opus-4-6",organization:"anthropic",rating:1534.90,vote_count:15989},
-    {rank:2,model_name:"claude-opus-4-6-thinking",organization:"anthropic",rating:1534.04,vote_count:14089},
-    {rank:3,model_name:"claude-fable-5",organization:"anthropic",rating:1529.98,vote_count:1123},
-    {rank:4,model_name:"claude-opus-4-7-thinking",organization:"anthropic",rating:1519.26,vote_count:11799},
-    {rank:5,model_name:"claude-opus-4-7",organization:"anthropic",rating:1517.81,vote_count:12135},
-    {rank:6,model_name:"claude-opus-4-5-20251101-thinking-32k",organization:"anthropic",rating:1502.48,vote_count:7622},
-    {rank:7,model_name:"claude-sonnet-4-6",organization:"anthropic",rating:1501.67,vote_count:13275},
-    {rank:8,model_name:"mimo-v2.5-pro",organization:"xiaomi",rating:1498.94,vote_count:9398},
-    {rank:9,model_name:"qwen3.7-max-preview",organization:"alibaba",rating:1498.89,vote_count:1128},
-    {rank:10,model_name:"claude-opus-4-5-20251101",organization:"anthropic",rating:1498.41,vote_count:17346},
-    {rank:11,model_name:"gpt-5.4-high",organization:"openai",rating:1495.41,vote_count:13454},
-    {rank:12,model_name:"glm-5.1",organization:"zai",rating:1495.13,vote_count:6267},
-    {rank:13,model_name:"claude-opus-4-8",organization:"anthropic",rating:1494.04,vote_count:6195},
-    {rank:14,model_name:"gpt-5.5-high",organization:"openai",rating:1493.89,vote_count:10090},
-    {rank:15,model_name:"claude-opus-4-8-thinking",organization:"anthropic",rating:1493.42,vote_count:6075},
-    {rank:16,model_name:"gemini-3.5-flash",organization:"google",rating:1493.41,vote_count:4552},
-    {rank:17,model_name:"claude-sonnet-4-5-20250929-thinking-32k",organization:"anthropic",rating:1488.34,vote_count:19302},
-    {rank:18,model_name:"ernie-5.1",organization:"baidu",rating:1486.79,vote_count:9043},
-    {rank:19,model_name:"glm-5.2 (max)",organization:"zai",rating:1486.35,vote_count:2520},
-    {rank:20,model_name:"claude-sonnet-4-5-20250929",organization:"anthropic",rating:1485.44,vote_count:19157}
-  ],
-  math: [
-    {rank:1,model_name:"claude-opus-4-6-thinking",organization:"anthropic",rating:1517.15,vote_count:2913},
-    {rank:2,model_name:"claude-fable-5",organization:"anthropic",rating:1513.76,vote_count:243},
-    {rank:3,model_name:"gemini-3.5-flash",organization:"google",rating:1507.99,vote_count:815},
-    {rank:4,model_name:"claude-opus-4-6",organization:"anthropic",rating:1507.58,vote_count:3295},
-    {rank:5,model_name:"claude-opus-4-7-thinking",organization:"anthropic",rating:1496.69,vote_count:2186},
-    {rank:6,model_name:"qwen3.7-max-preview",organization:"alibaba",rating:1495.29,vote_count:219},
-    {rank:7,model_name:"gpt-5.4-high",organization:"openai",rating:1491.97,vote_count:2693},
-    {rank:8,model_name:"claude-opus-4-8-thinking",organization:"anthropic",rating:1490.72,vote_count:1105},
-    {rank:9,model_name:"claude-opus-4-7",organization:"anthropic",rating:1489.49,vote_count:2241},
-    {rank:10,model_name:"gemini-3.1-pro-preview",organization:"google",rating:1487.05,vote_count:4038},
-    {rank:11,model_name:"mimo-v2.5-pro",organization:"xiaomi",rating:1480.97,vote_count:1744},
-    {rank:12,model_name:"ernie-5.1",organization:"baidu",rating:1480.85,vote_count:1685},
-    {rank:13,model_name:"kimi-k2.6",organization:"moonshot",rating:1479.35,vote_count:1718},
-    {rank:14,model_name:"gpt-5.5",organization:"openai",rating:1478.00,vote_count:2026},
-    {rank:15,model_name:"gemini-3-pro",organization:"google",rating:1476.05,vote_count:2653},
-    {rank:16,model_name:"qwen3.7-plus",organization:"alibaba",rating:1474.21,vote_count:710},
-    {rank:17,model_name:"gemini-3-flash",organization:"google",rating:1473.90,vote_count:2001},
-    {rank:18,model_name:"qwen3.5-max-preview",organization:"alibaba",rating:1472.94,vote_count:1355},
-    {rank:19,model_name:"glm-5.1",organization:"zai",rating:1472.70,vote_count:1238},
-    {rank:20,model_name:"claude-opus-4-8",organization:"anthropic",rating:1472.70,vote_count:1078}
-  ]
-};
+let categories = null;
 const catLabels = {overall:"Overall (종합)", coding:"Coding (코딩)", math:"Math (수학/추론)"};
 
 const orgColors = {
@@ -181,6 +114,7 @@ const orgColors = {
   moonshot:"#a78bfa", alibaba:"#ff6a00", minimax:"#f43f5e", xai:"#c7c9cf", zai:"#22c55e",
   baidu:"#2932e1", xiaomi:"#ff9500"
 };
+const FALLBACK_ORG_COLOR = "#8b8f99";
 const orgLabels = {
   anthropic:"Anthropic (Claude)", openai:"OpenAI (GPT)", google:"Google (Gemini)",
   meta:"Meta (Muse)", moonshot:"Moonshot AI (Kimi)", alibaba:"Alibaba (Qwen)",
@@ -257,7 +191,7 @@ function renderChart(cat) {
     datasets: [{
       label: 'Arena Score',
       data: rows.map(d => d.rating),
-      backgroundColor: rows.map(d => orgColors[d.organization]),
+      backgroundColor: rows.map(d => orgColors[d.organization] || FALLBACK_ORG_COLOR),
       borderRadius: 3,
       barThickness: 16
     }]
@@ -311,8 +245,17 @@ document.querySelectorAll('.tab').forEach(t => {
   t.addEventListener('click', () => switchTab(t.dataset.cat));
 });
 
-renderCrossTable();
-switchTab('overall');
+fetch('data/data.json')
+  .then(res => res.json())
+  .then(data => {
+    categories = data;
+    renderCrossTable();
+    switchTab('overall');
+  })
+  .catch(err => {
+    document.getElementById('kpi-row').innerHTML = '<div class="kpi"><div class="label">데이터 로드 실패</div><div class="value">-</div></div>';
+    console.error('failed to load data/data.json', err);
+  });
 </script>
 </body>
 </html>
