@@ -37,6 +37,8 @@ Hugging Face 쪽이 데이터셋을 새로 커밋하는 동안(parquet 재변환
 
 흐름: **Hugging Face가 데이터셋을 갱신 → 웹훅 발송 → Cloudflare Worker(`webhook-relay/src/index.js`)가 시크릿 검증 후 GitHub Actions `workflow_dispatch` 호출 → `refresh-data.yml` 즉시 실행**. 원본이 바뀌면 보통 몇 초~몇 분 안에 이 대시보드도 갱신됩니다. 매일 크론(`0 21 * * *`)은 웹훅이 실패하거나 유실되는 경우를 대비한 안전망으로 그대로 남겨뒀습니다.
 
+`lmarena-ai/leaderboard-dataset`은 이 대시보드가 쓰지 않는 카테고리(29개 중 `overall`/`coding`/`math`를 담고 있는 `text` config 하나만 씀)를 포함한 저장소 전체를 한 웹훅으로 묶어서 보내고, HF 웹훅은 config 단위로 필터링하는 기능이 없습니다. 그래서 Worker가 디스패치 전에 해당 웹훅을 유발한 커밋(`updatedRefs`의 sha)의 제목을 HF 커밋 API로 조회해 `"Update text for ..."` 형태인지 확인하고, 관련 없는 카테고리 갱신(`webdev`, `text_to_image`, `agent_*` 등)이면 그냥 무시합니다. 조회에 실패하거나 판단이 애매하면 안전하게 그대로 디스패치합니다(fail open).
+
 - 배포: `cd webhook-relay && npx wrangler deploy` (Cloudflare API 토큰은 `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` 환경변수로 주입)
 - Worker 시크릿: `HF_WEBHOOK_SECRET`(HF 웹훅 헤더 검증용), `GH_DISPATCH_PAT`(이 저장소에 `Actions: Read and write`만 부여된 fine-grained PAT) — 둘 다 `wrangler secret put`으로 등록, 저장소에는 커밋되지 않습니다.
 - Hugging Face 쪽 설정: `huggingface.co/settings/webhooks` → watched repo `datasets/lmarena-ai/leaderboard-dataset` → 대상 URL을 배포된 Worker 주소로, secret을 위 `HF_WEBHOOK_SECRET`과 동일하게, trigger는 `Repo update`로 등록
