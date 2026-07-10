@@ -61,6 +61,16 @@
   .src{font-size:12px; color:var(--muted); margin-top:6px;}
   .src a{color:#8ab4f8;}
   .table-scroll{max-height:520px; overflow-y:auto;}
+  .changelog-headline{margin:0 0 10px; color:var(--text); font-weight:600; font-size:14px;}
+  .changelog-cat{color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 4px;}
+  .changelog-cat:first-of-type{margin-top:0;}
+  .changelog-list{list-style:none; margin:0; padding:0; font-size:13px;}
+  .changelog-list li{padding:4px 0; border-bottom:1px solid var(--border);}
+  .changelog-list li:last-child{border-bottom:none;}
+  .chg-up{color:#4ade80;}
+  .chg-down{color:#f87171;}
+  .chg-new{color:#8ab4f8;}
+  .chg-out{color:var(--muted);}
 </style>
 </head>
 <body>
@@ -71,6 +81,11 @@
     데이터 출처: Hugging Face <code>lmarena-ai/leaderboard-dataset</code> (subset: <code>text</code>, split: <code>latest</code>, 2026-07-02 발표 스냅샷) — Overall / Coding / Math 3개 카테고리, 각 상위 20개 모델.<br>
     참고: 가격/비용 데이터는 현재 모델(2026년형)과 이름이 겹치는 신뢰할 수 있는 공개 데이터셋이 없어 이번 대시보드에서는 제외했습니다.
   </p>
+
+  <div class="card" id="changelog-card" style="display:none;">
+    <h2 id="changelog-title"></h2>
+    <div id="changelog-body"></div>
+  </div>
 
   <div class="tabs" id="tabs">
     <div class="tab active" data-cat="overall">Overall (종합)</div>
@@ -125,7 +140,7 @@ const orgLabels = {
 // build cross-category union, sorted by overall rank (models missing overall go last, sorted by best other rank)
 function buildCrossTable() {
   const byModel = {};
-  Object.keys(categories).forEach(cat => {
+  Object.keys(catLabels).forEach(cat => {
     categories[cat].forEach(row => {
       if (!byModel[row.model_name]) byModel[row.model_name] = {model_name: row.model_name, organization: row.organization, ranks: {}};
       byModel[row.model_name].ranks[cat] = row.rank;
@@ -232,6 +247,42 @@ function renderChart(cat) {
   });
 }
 
+function renderChangelog(changelog) {
+  const card = document.getElementById('changelog-card');
+  if (!changelog) { card.style.display = 'none'; return; }
+
+  const cats = ['overall', 'coding', 'math'].filter(cat => {
+    const d = changelog[cat];
+    return d && (d.moved.length || d.entered.length || d.dropped.length);
+  });
+  if (!cats.length) { card.style.display = 'none'; return; }
+
+  card.style.display = '';
+  document.getElementById('changelog-title').textContent =
+    `지난 갱신 이후 변경사항 (${changelog.previous_snapshot_date} → ${changelog.current_snapshot_date})`;
+
+  let html = '';
+  if (changelog.headline) {
+    html += `<p class="changelog-headline">${changelog.headline}</p>`;
+  }
+  cats.forEach(cat => {
+    const d = changelog[cat];
+    html += `<div class="changelog-cat">${catLabels[cat]}</div><ul class="changelog-list">`;
+    d.moved.forEach(m => {
+      const up = m.to_rank < m.from_rank;
+      html += `<li><span class="${up ? 'chg-up' : 'chg-down'}">${up ? '▲' : '▼'}</span> ${m.model_name} (${m.from_rank}위→${m.to_rank}위)</li>`;
+    });
+    d.entered.forEach(e => {
+      html += `<li><span class="chg-new">+</span> ${e.model_name} 신규 진입 (${e.rank}위)</li>`;
+    });
+    d.dropped.forEach(o => {
+      html += `<li><span class="chg-out">−</span> ${o.model_name} 이탈 (이전 ${o.last_rank}위)</li>`;
+    });
+    html += '</ul>';
+  });
+  document.getElementById('changelog-body').innerHTML = html;
+}
+
 let currentCat = 'overall';
 function switchTab(cat) {
   currentCat = cat;
@@ -249,6 +300,7 @@ fetch('data/data.json')
   .then(res => res.json())
   .then(data => {
     categories = data;
+    renderChangelog(data.changelog);
     renderCrossTable();
     switchTab('overall');
   })
