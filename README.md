@@ -46,16 +46,31 @@
 ## 로컬 실행
 
 ```bash
-python3 -m http.server 8000
+python -m http.server 8000
 # http://localhost:8000 접속
 ```
 
 데이터 파이프라인을 로컬에서 돌리려면 `.env`에 `DATABASE_URL`을 넣고:
 
+**macOS / Linux**
+
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 set -a && source .env && set +a
 python scripts/fetch_hf_to_supabase.py
 python scripts/build_data.py
+pytest
+```
+
+**Windows (PowerShell)**
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements-dev.txt
+Get-Content .env | ForEach-Object { if ($_ -match '^\s*([^#=]+)=(.*)$') { Set-Item "env:$($matches[1].Trim())" $matches[2] } }
+python scripts/fetch_hf_to_supabase.py
+python scripts/build_data.py
+pytest
 ```
