@@ -28,6 +28,8 @@
 
 이 Supabase 프로젝트는 다른 대시보드(hcp-roi-dashboard)와 같은 프로젝트를 공유하며, 테이블만 분리되어 있습니다. Supabase 접속 정보는 이 저장소의 `Settings → Secrets and variables → Actions`에 `DATABASE_URL`로 등록되어 있습니다.
 
+Hugging Face 쪽이 데이터셋을 새로 커밋하는 동안(parquet 재변환 중)에는 export API가 잠깐 400을 반환할 수 있고, 이 시간대에 변환 커밋마다 웹훅이 여러 번 겹쳐 들어올 수도 있습니다. `fetch_hf_to_supabase.py`는 이런 일시적 실패를 지수 백오프로 재시도(`_get_with_retry`, 최대 5회)하도록 되어 있어 변환이 끝나기 전에 트리거된 실행도 실패 없이 넘어갑니다.
+
 ### 실시간 갱신 (Hugging Face 웹훅)
 
 원본 데이터셋(`lmarena-ai/leaderboard-dataset`)은 고정된 주기가 아니라 하루~최대 열흘 이상 간격으로 불규칙하게 갱신됩니다(과거 커밋 이력 기준 간격 중앙값 약 2일). 하루 1회 크론만으로는 실제 갱신 시점과 어긋나 최대 하루 가까이 지연될 수 있어서, `webhook-relay/`에 Cloudflare Workers 기반 중계 서버를 추가해 원본이 바뀌는 즉시 반영되도록 했습니다.
@@ -38,6 +40,17 @@
 - Worker 시크릿: `HF_WEBHOOK_SECRET`(HF 웹훅 헤더 검증용), `GH_DISPATCH_PAT`(이 저장소에 `Actions: Read and write`만 부여된 fine-grained PAT) — 둘 다 `wrangler secret put`으로 등록, 저장소에는 커밋되지 않습니다.
 - Hugging Face 쪽 설정: `huggingface.co/settings/webhooks` → watched repo `datasets/lmarena-ai/leaderboard-dataset` → 대상 URL을 배포된 Worker 주소로, secret을 위 `HF_WEBHOOK_SECRET`과 동일하게, trigger는 `Repo update`로 등록
 - 즉시 갱신이 필요하면 저장소 `Actions` 탭 → `Refresh dashboard data` → `Run workflow`로 수동 실행도 가능합니다
+
+## 테스트 & CI
+
+`tests/`에 `scripts/fetch_hf_to_supabase.py`(필터링, 재시도 로직)와 `scripts/build_data.py`(Supabase row → JSON 변환)에 대한 pytest 유닛 테스트가 있습니다. Supabase/Hugging Face 호출은 모킹되어 있어 네트워크나 `DATABASE_URL` 없이도 실행됩니다.
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+
+`requirements.txt`는 `refresh-data.yml`이 실제로 필요로 하는 런타임 의존성만 담고 있고, `requirements-dev.txt`는 여기에 `pytest`를 더한 로컬/CI용입니다. `.github/workflows/ci.yml`이 `main`에 대한 모든 push·PR에서 이 테스트를 자동으로 돌립니다. 커밋·push 전에는 항상 로컬에서 먼저 `pytest`를 통과시키는 것을 원칙으로 합니다.
 
 ## 라이선스 / 데이터 출처
 
