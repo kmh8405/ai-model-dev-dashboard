@@ -6,6 +6,7 @@ which is rate-limited to 100 rows/page and prone to transient 502s.
 """
 import io
 import os
+import time
 
 import psycopg2
 import pyarrow.parquet as pq
@@ -21,15 +22,46 @@ PARQUET_INDEX_URL = (
     f"https://huggingface.co/api/datasets/{DATASET}/parquet/{CONFIG}/{SPLIT}"
 )
 
+MAX_ATTEMPTS = 5
+INITIAL_BACKOFF_SECONDS = 5
+
+
+def _get_with_retry(url, **kwargs):
+    """GET a URL, retrying with exponential backoff on failure.
+
+    Right after the upstream dataset is pushed, Hugging Face's parquet
+    export can 400 for a few minutes while it's still being (re)converted,
+    and the HF webhook fires once per conversion commit — so a single
+    dataset update can trigger several refresh runs back to back while
+    the export isn't ready yet. Retrying here absorbs that instead of
+    failing the whole job.
+    """
+    last_exc = None
+    for attempt in range(MAX_ATTEMPTS):
+        try:
+            resp = requests.get(url, **kwargs)
+            resp.raise_for_status()
+            return resp
+        except requests.exceptions.RequestException as exc:
+            last_exc = exc
+            if attempt == MAX_ATTEMPTS - 1:
+                raise
+            wait = INITIAL_BACKOFF_SECONDS * (2 ** attempt)
+            print(
+                f"GET {url} failed ({exc}); retrying in {wait}s "
+                f"(attempt {attempt + 1}/{MAX_ATTEMPTS})"
+            )
+            time.sleep(wait)
+    raise last_exc  # pragma: no cover - unreachable, loop always returns or raises
+
 
 def fetch_all_rows():
-    resp = requests.get(PARQUET_INDEX_URL, timeout=30)
-    resp.raise_for_status()
+    resp = _get_with_retry(PARQUET_INDEX_URL, timeout=30)
     parquet_urls = resp.json()
 
     rows = []
     for url in parquet_urls:
-        data = requests.get(url, timeout=60).content
+        data = _get_with_retry(url, timeout=60).content
         table = pq.read_table(io.BytesIO(data))
         rows.extend(table.to_pylist())
     return rows
