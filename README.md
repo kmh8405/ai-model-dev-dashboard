@@ -53,7 +53,14 @@ pip install -r requirements-dev.txt
 pytest
 ```
 
-`requirements.txt`는 `refresh-data.yml`이 실제로 필요로 하는 런타임 의존성만 담고 있고, `requirements-dev.txt`는 여기에 `pytest`를 더한 로컬/CI용입니다. `.github/workflows/ci.yml`이 `main`에 대한 모든 push·PR에서 이 테스트를 자동으로 돌립니다. 커밋·push 전에는 항상 로컬에서 먼저 `pytest`를 통과시키는 것을 원칙으로 합니다.
+`webhook-relay/test/`에는 Cloudflare Worker(`webhook-relay/src/index.js`)의 카테고리 필터링·시크릿 검증·fail-open 동작을 검증하는 테스트가 Node 내장 테스트 러너(`node --test`, 추가 패키지 설치 없음)로 있습니다.
+
+```bash
+cd webhook-relay
+node --test
+```
+
+`requirements.txt`는 `refresh-data.yml`이 실제로 필요로 하는 런타임 의존성만 담고 있고, `requirements-dev.txt`는 여기에 `pytest`를 더한 로컬/CI용입니다. `.github/workflows/ci.yml`이 `main`에 대한 모든 push·PR에서 pytest와 `node --test` 둘 다 자동으로 돌립니다. 커밋·push 전에는 항상 로컬에서 먼저 이 테스트들을 통과시키는 것을 원칙으로 합니다.
 
 ## 라이선스 / 데이터 출처
 
