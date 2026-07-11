@@ -43,7 +43,7 @@ Hugging Face 쪽이 데이터셋을 새로 커밋하는 동안(parquet 재변환
 
 `lmarena-ai/leaderboard-dataset`은 이 대시보드가 쓰지 않는 카테고리(29개 중 `overall`/`coding`/`math`를 담고 있는 `text` config 하나만 씀)를 포함한 저장소 전체를 한 웹훅으로 묶어서 보내고, HF 웹훅은 config 단위로 필터링하는 기능이 없습니다. 그래서 Worker가 디스패치 전에 해당 웹훅을 유발한 커밋(`updatedRefs`의 sha)의 제목을 HF 커밋 API로 조회해 `"Update text for ..."` 형태인지 확인하고, 관련 없는 카테고리 갱신(`webdev`, `text_to_image`, `agent_*` 등)이면 그냥 무시합니다. 조회에 실패하거나 판단이 애매하면 안전하게 그대로 디스패치합니다(fail open).
 
-- 배포: `cd webhook-relay && npx wrangler deploy` (Cloudflare API 토큰은 `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` 환경변수로 주입)
+- 배포: `cd webhook-relay && npx wrangler deploy`. 인증은 `npx wrangler login`으로 브라우저에서 로그인하는 걸 권장합니다(토큰을 어디에도 붙여넣을 필요 없음). CI 등 비대화형 환경에서만 `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` 환경변수를 씁니다.
 - Worker 시크릿: `HF_WEBHOOK_SECRET`(HF 웹훅 헤더 검증용), `GH_DISPATCH_PAT`(이 저장소에 `Actions: Read and write`만 부여된 fine-grained PAT) — 둘 다 `wrangler secret put`으로 등록, 저장소에는 커밋되지 않습니다.
 - Hugging Face 쪽 설정: `huggingface.co/settings/webhooks` → watched repo `datasets/lmarena-ai/leaderboard-dataset` → 대상 URL을 배포된 Worker 주소로, secret을 위 `HF_WEBHOOK_SECRET`과 동일하게, trigger는 `Repo update`로 등록
 - 즉시 갱신이 필요하면 저장소 `Actions` 탭 → `Refresh dashboard data` → `Run workflow`로 수동 실행도 가능합니다
@@ -65,6 +65,28 @@ node --test
 ```
 
 `requirements.txt`는 `refresh-data.yml`이 실제로 필요로 하는 런타임 의존성만 담고 있고, `requirements-dev.txt`는 여기에 `pytest`를 더한 로컬/CI용입니다. `.github/workflows/ci.yml`이 `main`에 대한 모든 push·PR에서 pytest와 `node --test` 둘 다 자동으로 돌립니다. 커밋·push 전에는 항상 로컬에서 먼저 이 테스트들을 통과시키는 것을 원칙으로 합니다.
+
+## 트러블슈팅 히스토리
+
+실제로 있었던 문제를 문제 → 원인 → 해결 순으로 남깁니다. 앞으로 이 파이프라인에 문제가 생기고 고치면 이 형식으로 계속 추가합니다.
+
+### 2026-07-10 — 무관한 카테고리 갱신으로 CI 실패 33건
+
+- **문제**: 하룻밤 사이 GitHub Actions 실패 알림 33개.
+- **원인**: `lmarena-ai/leaderboard-dataset`은 29개 카테고리를 한 저장소에 묶어두는데, 이 대시보드가 안 쓰는 `webdev`/`text_to_image`/`image_edit` 카테고리가 갱신됐을 뿐인데도 HF 웹훅이 저장소 전체 단위라 매번 워크플로우가 트리거됨. 마침 그 시점에 전체 parquet 재변환이 진행 중이라 우리가 쓰는 `text` config API도 잠깐 400을 반환해서 33건 전부 실패.
+- **해결**: `fetch_hf_to_supabase.py`에 지수 백오프 재시도를 추가하고, `webhook-relay/src/index.js`가 디스패치 전에 커밋 제목이 `"Update text for ..."`인지 확인해 무관한 카테고리는 걸러내도록 수정.
+
+### 2026-07-11 — 재시도 예산 부족으로 실제 갱신 실패 7건
+
+- **문제**: 실제 `text` config 갱신(`overall`/`coding`/`math`)이 있었는데도 워크플로우 7건이 전부 실패.
+- **원인**: HF의 parquet 재변환이 기존 재시도 예산(5회, 최대 ~75초)보다 오래 걸림 — 몇 시간 뒤 같은 API를 직접 호출해보니 정상 200이었고 데이터도 이미 갱신돼 있었음. 즉 재시도 예산만 부족했던 것.
+- **해결**: 재시도 횟수를 34회(60초 캡 · 총 최대 약 30분)로 확대. Public repo라 GitHub Actions 실행 시간이 무료라는 점을 감안해 넉넉하게 설정.
+
+### 2026-07-11 — 웹훅 false positive로 커밋 1개에 디스패치 7번
+
+- **문제**: 실제 `text` 커밋은 1개인데 9초 사이 GitHub Actions가 7번 실행됨.
+- **원인**: 사용자가 HF 웹훅 Activity 로그에서 직접 가져온 실제 페이로드로 확인 — `refs/convert/parquet`(HF 내부 parquet 변환 브랜치) 갱신 이벤트였고 `updatedRefs`에 `refs/heads/main` 항목이 아예 없었음. 기존 코드는 이럴 때 `repo.headSha`(그 순간 main의 HEAD)로 대체했는데, 마침 HEAD가 아직 실제 `text` 커밋이었던 순간에 이 무관한 이벤트가 필터를 통과해 중복 디스패치가 발생.
+- **해결**: `refs/heads/main` 항목이 없으면 `repo.headSha`로 대체하지 않고 그냥 무시하도록 수정. 실제 페이로드 형태 그대로 회귀 테스트 추가. 다음에 비슷한 일이 생기면 바로 진단할 수 있도록 Cloudflare Worker에 Observability(요청 로그)도 켜둠.
 
 ## 라이선스 / 데이터 출처
 
