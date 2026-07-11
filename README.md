@@ -29,7 +29,7 @@
 
 이 Supabase 프로젝트는 다른 대시보드(hcp-roi-dashboard)와 같은 프로젝트를 공유하며, 테이블만 분리되어 있습니다. Supabase 접속 정보는 이 저장소의 `Settings → Secrets and variables → Actions`에 `DATABASE_URL`로 등록되어 있습니다.
 
-Hugging Face 쪽이 데이터셋을 새로 커밋하는 동안(parquet 재변환 중)에는 export API가 잠깐 400을 반환할 수 있고, 이 시간대에 변환 커밋마다 웹훅이 여러 번 겹쳐 들어올 수도 있습니다. `fetch_hf_to_supabase.py`는 이런 일시적 실패를 지수 백오프로 재시도(`_get_with_retry`, 최대 5회)하도록 되어 있어 변환이 끝나기 전에 트리거된 실행도 실패 없이 넘어갑니다.
+Hugging Face 쪽이 데이터셋을 새로 커밋하는 동안(parquet 재변환 중)에는 export API가 잠깐 400을 반환할 수 있고, 이 시간대에 변환 커밋마다 웹훅이 여러 번 겹쳐 들어올 수도 있습니다. `fetch_hf_to_supabase.py`는 이런 일시적 실패를 지수 백오프로 재시도(`_get_with_retry`, 최대 8회 · 최대 약 10.5분)하도록 되어 있어 변환이 끝나기 전에 트리거된 실행도 실패 없이 넘어갑니다. 또한 HF가 같은 웹훅을 짧은 시간에 중복 전송해 이 워크플로우가 동시에 여러 번 돌아갈 수 있어서, `refresh-data.yml`에 `concurrency` 그룹을 걸어 중복 실행을 큐에 순서대로 세워두고(동시 실행 금지) `git push` 전에 `git pull --rebase`를 넣어 서로 충돌 없이 순차적으로 처리되게 했습니다.
 
 ### 실시간 갱신 (Hugging Face 웹훅)
 

@@ -5,6 +5,14 @@ on:
     - cron: '0 21 * * *'  # 06:00 KST daily
   workflow_dispatch: {}
 
+# Hugging Face can (and did, on 2026-07-11) redeliver the same webhook
+# several times in quick succession, dispatching this workflow more than
+# once for the same underlying update. Queue duplicates instead of running
+# them in parallel so they can't race each other on the final git push.
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -36,4 +44,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/data.json
           git diff --cached --quiet && echo "No data changes." || git commit -m "Refresh data.json from Supabase"
+          git pull --rebase origin main
           git push

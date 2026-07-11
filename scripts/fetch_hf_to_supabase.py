@@ -22,7 +22,7 @@ PARQUET_INDEX_URL = (
     f"https://huggingface.co/api/datasets/{DATASET}/parquet/{CONFIG}/{SPLIT}"
 )
 
-MAX_ATTEMPTS = 5
+MAX_ATTEMPTS = 8
 INITIAL_BACKOFF_SECONDS = 5
 
 
@@ -30,11 +30,11 @@ def _get_with_retry(url, **kwargs):
     """GET a URL, retrying with exponential backoff on failure.
 
     Right after the upstream dataset is pushed, Hugging Face's parquet
-    export can 400 for a few minutes while it's still being (re)converted,
-    and the HF webhook fires once per conversion commit — so a single
-    dataset update can trigger several refresh runs back to back while
-    the export isn't ready yet. Retrying here absorbs that instead of
-    failing the whole job.
+    export can 400 while it's still being (re)converted. On 2026-07-11 this
+    took longer than the previous 5-attempt/~75s budget, so a genuine "text"
+    config update (2026-07-10 snapshot) still failed outright. 8 attempts
+    (~635s / ~10.5 min worst case) gives the conversion much more room
+    without making a truly broken run hang forever.
     """
     last_exc = None
     for attempt in range(MAX_ATTEMPTS):
