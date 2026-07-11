@@ -529,14 +529,14 @@
           "to_rank": 19
         },
         {
-          "model_name": "mimo-v2.5-pro",
-          "from_rank": 8,
-          "to_rank": 10
-        },
-        {
           "model_name": "ernie-5.1",
           "from_rank": 18,
           "to_rank": 20
+        },
+        {
+          "model_name": "mimo-v2.5-pro",
+          "from_rank": 8,
+          "to_rank": 10
         },
         {
           "model_name": "qwen3.7-max-preview",
