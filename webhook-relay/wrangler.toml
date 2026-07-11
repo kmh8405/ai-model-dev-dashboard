@@ -1,3 +1,10 @@
 name = "ai-model-dashboard-hf-relay"
 main = "src/index.js"
 compatibility_date = "2026-01-01"
+
+# Persists request logs (visible in the dashboard's Observability tab)
+# so a future webhook-burst incident can be diagnosed directly instead
+# of guessing after the fact.
+[observability]
+enabled = true
+head_sampling_rate = 1

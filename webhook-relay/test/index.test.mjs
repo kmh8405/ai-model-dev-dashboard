@@ -95,11 +95,34 @@ describe("webhook relay", () => {
     assert.equal(wasDispatched(), true);
   });
 
-  test("fails open (dispatches) when the payload has no sha at all", async () => {
+  test("ignores a payload with no refs/heads/main entry at all", async () => {
     const wasDispatched = installFetch();
     const res = await worker.fetch(makeRequest({ sha: undefined }), ENV);
     assert.equal(res.status, 202);
-    assert.equal(wasDispatched(), true);
+    assert.equal(wasDispatched(), false);
+  });
+
+  test("ignores a refs/convert/parquet update, even when repo.headSha matches a relevant commit", async () => {
+    // Real payload shape from a 2026-07-11 incident: HF's internal parquet-
+    // conversion branch updated (unrelated to any "text" content commit),
+    // but repo.headSha happened to still equal the sha of an earlier
+    // relevant "text" commit. Falling back to repo.headSha here is exactly
+    // the bug that produced 7 dispatches for one real update.
+    const wasDispatched = installFetch();
+    const req = new Request("https://example.com/webhook", {
+      method: "POST",
+      headers: { "x-webhook-secret": "test-secret" },
+      body: JSON.stringify({
+        event: { action: "update", scope: "repo" },
+        repo: { type: "dataset", name: "lmarena-ai/leaderboard-dataset", headSha: "sha-text-update" },
+        updatedRefs: [
+          { ref: "refs/convert/parquet", oldSha: "old-parquet-sha", newSha: "new-parquet-sha" },
+        ],
+      }),
+    });
+    const res = await worker.fetch(req, ENV);
+    assert.equal(res.status, 202);
+    assert.equal(wasDispatched(), false);
   });
 
   test("returns 502 when the GitHub dispatch call itself fails", async () => {

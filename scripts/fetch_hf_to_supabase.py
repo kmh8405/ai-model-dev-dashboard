@@ -22,19 +22,23 @@ PARQUET_INDEX_URL = (
     f"https://huggingface.co/api/datasets/{DATASET}/parquet/{CONFIG}/{SPLIT}"
 )
 
-MAX_ATTEMPTS = 8
+MAX_ATTEMPTS = 34
 INITIAL_BACKOFF_SECONDS = 5
+MAX_BACKOFF_SECONDS = 60
 
 
 def _get_with_retry(url, **kwargs):
-    """GET a URL, retrying with exponential backoff on failure.
+    """GET a URL, retrying with capped exponential backoff on failure.
 
     Right after the upstream dataset is pushed, Hugging Face's parquet
-    export can 400 while it's still being (re)converted. On 2026-07-11 this
-    took longer than the previous 5-attempt/~75s budget, so a genuine "text"
-    config update (2026-07-10 snapshot) still failed outright. 8 attempts
-    (~635s / ~10.5 min worst case) gives the conversion much more room
-    without making a truly broken run hang forever.
+    export can 400 while it's still being (re)converted, and there's no
+    documented upper bound on how long that takes — on 2026-07-11 it
+    outlasted an 8-attempt/~635s budget, so a genuine "text" config update
+    still failed outright. This repo's GitHub Actions minutes are free
+    (public repo), so there's no reason to be stingy: 34 attempts with
+    backoff capped at 60s gives ~1815s (~30 min) of total runway before
+    giving up, which is this project's automated stand-in for "someone
+    manually re-runs the workflow a while later".
     """
     last_exc = None
     for attempt in range(MAX_ATTEMPTS):
@@ -46,7 +50,7 @@ def _get_with_retry(url, **kwargs):
             last_exc = exc
             if attempt == MAX_ATTEMPTS - 1:
                 raise
-            wait = INITIAL_BACKOFF_SECONDS * (2 ** attempt)
+            wait = min(INITIAL_BACKOFF_SECONDS * (2 ** attempt), MAX_BACKOFF_SECONDS)
             print(
                 f"GET {url} failed ({exc}); retrying in {wait}s "
                 f"(attempt {attempt + 1}/{MAX_ATTEMPTS})"

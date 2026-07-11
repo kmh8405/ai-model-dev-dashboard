@@ -29,7 +29,11 @@
 
 이 Supabase 프로젝트는 다른 대시보드(hcp-roi-dashboard)와 같은 프로젝트를 공유하며, 테이블만 분리되어 있습니다. Supabase 접속 정보는 이 저장소의 `Settings → Secrets and variables → Actions`에 `DATABASE_URL`로 등록되어 있습니다.
 
-Hugging Face 쪽이 데이터셋을 새로 커밋하는 동안(parquet 재변환 중)에는 export API가 잠깐 400을 반환할 수 있고, 이 시간대에 변환 커밋마다 웹훅이 여러 번 겹쳐 들어올 수도 있습니다. `fetch_hf_to_supabase.py`는 이런 일시적 실패를 지수 백오프로 재시도(`_get_with_retry`, 최대 8회 · 최대 약 10.5분)하도록 되어 있어 변환이 끝나기 전에 트리거된 실행도 실패 없이 넘어갑니다. 또한 HF가 같은 웹훅을 짧은 시간에 중복 전송해 이 워크플로우가 동시에 여러 번 돌아갈 수 있어서, `refresh-data.yml`에 `concurrency` 그룹을 걸어 중복 실행을 큐에 순서대로 세워두고(동시 실행 금지) `git push` 전에 `git pull --rebase`를 넣어 서로 충돌 없이 순차적으로 처리되게 했습니다.
+Hugging Face 쪽이 데이터셋을 새로 커밋하는 동안(parquet 재변환 중)에는 export API가 잠깐 400을 반환할 수 있습니다. 변환이 정확히 얼마나 걸릴지 문서화된 상한이 없어서, `fetch_hf_to_supabase.py`는 이 실패를 최대 60초로 캡을 씌운 지수 백오프로 재시도합니다(`_get_with_retry`, 최대 34회 · 총 최대 약 30분). 이 저장소는 public repo라 GitHub Actions 실행 시간이 무료라, 사람이 나중에 수동으로 재실행하는 대신 자동으로 그만큼 버티도록 넉넉하게 잡았습니다.
+
+또한 이 웹훅은 `refs/heads/main`에 대한 실제 콘텐츠 커밋이 아닌 이벤트(예: HF의 내부 parquet 변환 브랜치 `refs/convert/parquet` 갱신)에도 발동되는데, 그런 이벤트는 `updatedRefs`에 `refs/heads/main` 항목이 아예 없습니다. `webhook-relay/src/index.js`는 이 경우 `repo.headSha`로 대체(fallback)하지 않고 그냥 무시합니다 — 예전엔 이 fallback 때문에 마침 HEAD가 우연히 실제 `text` 커밋이었던 순간에 무관한 이벤트가 필터를 통과해버려, 커밋 하나에 중복 디스패치가 여러 번 발생한 적이 있습니다(2026-07-11). Worker의 `wrangler.toml`에는 `[observability]`를 켜둬서 다음에 비슷한 일이 생기면 Cloudflare 대시보드(Workers & Pages → 해당 Worker → Observability 탭)에서 바로 원인을 확인할 수 있습니다.
+
+`refresh-data.yml`에는 `concurrency` 그룹도 걸려 있어서, 그래도 중복 실행이 오면 동시에 안 돌고 큐에 순서대로 처리되며, `git push` 전 `git pull --rebase`로 서로 충돌 없이 안전하게 넘어갑니다.
 
 ### 실시간 갱신 (Hugging Face 웹훅)
 
