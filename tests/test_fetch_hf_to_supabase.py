@@ -92,3 +92,61 @@ class TestFetchAllRows:
             rows = mod.fetch_all_rows()
 
         assert rows == [{"model_name": "model-a"}, {"model_name": "model-b"}]
+
+
+class TestDiagnoseFetchFailure:
+    def test_flags_hf_platform_outage_when_datasets_server_5xxs(self):
+        down_resp = _response(503)
+        down_resp.raise_for_status.side_effect = None  # not checked, only status_code is read
+        with patch.object(mod.requests, "get", return_value=down_resp):
+            summary = mod._diagnose_fetch_failure(RuntimeError("boom"))
+
+        assert "platform outage" in summary
+        assert "boom" in summary
+
+    def test_does_not_flag_outage_when_datasets_server_is_healthy(self):
+        ok_resp = _response(200)
+        with patch.object(mod.requests, "get", return_value=ok_resp):
+            summary = mod._diagnose_fetch_failure(RuntimeError("boom"))
+
+        assert "platform outage" not in summary
+        assert "worth a closer look" in summary
+
+    def test_treats_health_check_network_error_as_not_confirmed_outage(self):
+        with patch.object(mod.requests, "get", side_effect=requests.exceptions.ConnectionError()):
+            summary = mod._diagnose_fetch_failure(RuntimeError("boom"))
+
+        assert "platform outage" not in summary
+
+
+class TestWriteSummary:
+    def test_appends_to_github_step_summary_when_set(self, tmp_path, monkeypatch):
+        summary_file = tmp_path / "summary.md"
+        summary_file.write_text("existing content\n", encoding="utf-8")
+        monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(summary_file))
+
+        mod._write_summary("new section\n")
+
+        assert summary_file.read_text(encoding="utf-8") == "existing content\nnew section\n"
+
+    def test_is_a_no_op_without_github_step_summary(self, monkeypatch):
+        monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+
+        mod._write_summary("should not raise")  # just must not throw
+
+
+class TestMain:
+    def test_writes_summary_and_reraises_on_fetch_failure(self, monkeypatch):
+        monkeypatch.setenv("DATABASE_URL", "postgres://unused")
+        error = requests.exceptions.ConnectionError("network down")
+
+        with patch.object(mod, "fetch_all_rows", side_effect=error), \
+                patch.object(mod, "_diagnose_fetch_failure", return_value="## diagnosis\n") as diagnose, \
+                patch.object(mod, "_write_summary") as write_summary, \
+                patch.object(mod, "upsert") as upsert:
+            with pytest.raises(requests.exceptions.ConnectionError):
+                mod.main()
+
+        diagnose.assert_called_once_with(error)
+        write_summary.assert_called_once_with("## diagnosis\n")
+        upsert.assert_not_called()

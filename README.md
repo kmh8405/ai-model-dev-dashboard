@@ -35,6 +35,8 @@ Hugging Face 쪽이 데이터셋을 새로 커밋하는 동안(parquet 재변환
 
 `refresh-data.yml`에는 `concurrency` 그룹도 걸려 있어서, 그래도 중복 실행이 오면 동시에 안 돌고 큐에 순서대로 처리되며, `git push` 전 `git pull --rebase`로 서로 충돌 없이 안전하게 넘어갑니다.
 
+HF의 웹훅 Activity 로그에 `202`가 찍혀도 데이터를 실제로 가져오는 데 성공했다는 뜻은 아닙니다 — 이 릴레이는 무시(ignored)든 디스패치(dispatched)든 항상 202를 반환하기 때문에, 그건 "웹훅이 잘 전달됐다"만 확인해줄 뿐입니다. 실제 데이터를 서빙하는 HF 백엔드(`datasets-server.huggingface.co`)가 통째로 죽어있어도 웹훅 전달 자체는 멀쩡할 수 있습니다. 그래서 `fetch_hf_to_supabase.py`는 재시도를 전부 소진하고 실패하면 `datasets-server`의 `/is-valid` 헬스체크를 한 번 더 찔러보고, 그 결과에 따라 "HF 플랫폼 자체 장애로 보임" 또는 "원인 불명, 직접 확인 필요"로 구분한 진단 메시지를 GitHub Actions 실행 화면의 **Summary 탭**(`$GITHUB_STEP_SUMMARY`)에 바로 남깁니다. 로그를 뒤질 필요 없이 실행 결과 페이지만 열면 바로 원인을 알 수 있습니다.
+
 ### 실시간 갱신 (Hugging Face 웹훅)
 
 원본 데이터셋(`lmarena-ai/leaderboard-dataset`)은 고정된 주기가 아니라 하루~최대 열흘 이상 간격으로 불규칙하게 갱신됩니다(과거 커밋 이력 기준 간격 중앙값 약 2일). 하루 1회 크론만으로는 실제 갱신 시점과 어긋나 최대 하루 가까이 지연될 수 있어서, `webhook-relay/`에 Cloudflare Workers 기반 중계 서버를 추가해 원본이 바뀌는 즉시 반영되도록 했습니다.
@@ -87,6 +89,12 @@ node --test
 - **문제**: 실제 `text` 커밋은 1개인데 9초 사이 GitHub Actions가 7번 실행됨.
 - **원인**: 사용자가 HF 웹훅 Activity 로그에서 직접 가져온 실제 페이로드로 확인 — `refs/convert/parquet`(HF 내부 parquet 변환 브랜치) 갱신 이벤트였고 `updatedRefs`에 `refs/heads/main` 항목이 아예 없었음. 기존 코드는 이럴 때 `repo.headSha`(그 순간 main의 HEAD)로 대체했는데, 마침 HEAD가 아직 실제 `text` 커밋이었던 순간에 이 무관한 이벤트가 필터를 통과해 중복 디스패치가 발생.
 - **해결**: `refs/heads/main` 항목이 없으면 `repo.headSha`로 대체하지 않고 그냥 무시하도록 수정. 실제 페이로드 형태 그대로 회귀 테스트 추가. 다음에 비슷한 일이 생기면 바로 진단할 수 있도록 Cloudflare Worker에 Observability(요청 로그)도 켜둠.
+
+### 2026-07-13 — Hugging Face 플랫폼 자체 장애로 실패 2건
+
+- **문제**: 실제 `text` config 갱신(웹훅)과 그날 밤 크론, 둘 다 재시도 예산(34회 · 30분)을 전부 소진하고 실패.
+- **원인**: 이번엔 우리 쪽 문제가 아니었음. (1) 이 대시보드가 안 쓰는 `webdev` config도 똑같이 400을 반환 — `text`만의 문제가 아니라 데이터셋 전체 문제. (2) HF의 공식 조회 서비스 `datasets-server.huggingface.co` 자체가 503을 반환 — HF 인프라 자체가 다운. (3) 에러 메시지도 평소와 다르게 `"Unexpected token '<'... is not valid JSON"` — CloudFront 에러 페이지(HTML)를 HF 서버가 JSON인 것처럼 파싱하려다 실패한 것. 이 장애는 확인 시점 기준 14시간 넘게 지속 중이었음. HF 웹훅 Activity 로그에는 `202`(전달 성공)로만 남아서 헷갈릴 수 있는데, 이 릴레이는 무시/디스패치 여부와 무관하게 항상 202를 반환하므로 "웹훅 전달 성공"과 "실제 데이터 조회 성공"은 별개임.
+- **해결**: 코드로 고칠 수 있는 문제가 아니었음(외부 서비스 장애). 대신 재시도가 전부 실패하면 `datasets-server`의 `/is-valid`를 한 번 더 확인해서 "HF 플랫폼 장애로 보임" vs "원인 불명, 직접 확인 필요"를 구분한 진단 메시지를 GitHub Actions 실행 화면 Summary 탭에 자동으로 남기도록 `fetch_hf_to_supabase.py`에 추가(`_diagnose_fetch_failure`, `_write_summary`). 로그를 뒤지지 않아도 실행 결과 페이지만 열면 바로 원인을 알 수 있음. 크론이 매일 자동으로 재시도하므로 HF가 복구되면 별도 조치 없이 자연히 해결됨.
 
 ## 라이선스 / 데이터 출처
 

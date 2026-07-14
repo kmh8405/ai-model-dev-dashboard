@@ -71,6 +71,54 @@ def fetch_all_rows():
     return rows
 
 
+def _write_summary(text):
+    """Append markdown to the GitHub Actions run summary, if running in CI.
+
+    No-op locally (GITHUB_STEP_SUMMARY is unset outside Actions).
+    """
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not summary_path:
+        return
+    with open(summary_path, "a", encoding="utf-8") as f:
+        f.write(text)
+
+
+def _diagnose_fetch_failure(exc):
+    """Classify a fetch failure so the run summary says *what kind* of
+    problem this was, not just "it failed".
+
+    HF's webhook Activity log only shows whether the webhook was delivered
+    (it always shows success here, since this relay always returns 202) —
+    it says nothing about whether HF's own data-serving backend was
+    actually up, which is one layer deeper and is what this checks.
+    """
+    try:
+        resp = requests.get(
+            f"https://datasets-server.huggingface.co/is-valid?dataset={DATASET}",
+            timeout=10,
+        )
+        hf_platform_down = resp.status_code >= 500
+    except requests.exceptions.RequestException:
+        hf_platform_down = False
+
+    if hf_platform_down:
+        return (
+            "## ❌ Refresh failed: Hugging Face platform outage (not this pipeline's bug)\n\n"
+            f"All {MAX_ATTEMPTS} attempts to fetch `{DATASET}` failed, and "
+            "`datasets-server.huggingface.co` itself is returning a 5xx — this looks like "
+            "an outage on Hugging Face's side, not a bug here. Nothing to do but wait; "
+            "the daily cron will retry automatically once HF recovers.\n\n"
+            f"Last error: `{exc}`\n"
+        )
+    return (
+        "## ❌ Refresh failed\n\n"
+        f"All {MAX_ATTEMPTS} attempts to fetch `{DATASET}` failed, but "
+        "`datasets-server.huggingface.co` looks healthy right now — this doesn't match "
+        "the known HF-outage pattern, so it's worth a closer look rather than just waiting.\n\n"
+        f"Last error: `{exc}`\n"
+    )
+
+
 def filter_top_n(rows):
     return [
         r for r in rows
@@ -112,7 +160,11 @@ def upsert(rows):
 
 
 def main():
-    rows = fetch_all_rows()
+    try:
+        rows = fetch_all_rows()
+    except requests.exceptions.RequestException as exc:
+        _write_summary(_diagnose_fetch_failure(exc))
+        raise
     print(f"fetched {len(rows)} rows from {DATASET}")
     filtered = filter_top_n(rows)
     print(f"kept {len(filtered)} rows across {sorted(TARGET_CATEGORIES)} (top {TOP_N} each)")
