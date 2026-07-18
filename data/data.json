@@ -602,6 +602,26 @@
           "to_rank": 17
         },
         {
+          "model_name": "gpt-5.4-high",
+          "from_rank": 9,
+          "to_rank": 10
+        },
+        {
+          "model_name": "gemini-3.1-pro-preview",
+          "from_rank": 10,
+          "to_rank": 11
+        },
+        {
+          "model_name": "gpt-5.5",
+          "from_rank": 13,
+          "to_rank": 12
+        },
+        {
+          "model_name": "ernie-5.1",
+          "from_rank": 12,
+          "to_rank": 13
+        },
+        {
           "model_name": "claude-fable-5",
           "from_rank": 2,
           "to_rank": 1
@@ -630,26 +650,6 @@
           "model_name": "claude-opus-4-7",
           "from_rank": 8,
           "to_rank": 9
-        },
-        {
-          "model_name": "gpt-5.4-high",
-          "from_rank": 9,
-          "to_rank": 10
-        },
-        {
-          "model_name": "gemini-3.1-pro-preview",
-          "from_rank": 10,
-          "to_rank": 11
-        },
-        {
-          "model_name": "gpt-5.5",
-          "from_rank": 13,
-          "to_rank": 12
-        },
-        {
-          "model_name": "ernie-5.1",
-          "from_rank": 12,
-          "to_rank": 13
         }
       ],
       "entered": [
