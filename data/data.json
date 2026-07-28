@@ -1,284 +1,284 @@
 {
   "overall": [
     {
-      "model_name": "gpt-5.5",
-      "organization": "openai",
-      "rank": 6,
-      "rating": 1480.745785246943,
-      "vote_count": 47031
-    },
-    {
       "model_name": "gpt-5.2-high",
       "organization": "openai",
       "rank": 7,
-      "rating": 1476.478928873049,
-      "vote_count": 47421
+      "rating": 1476.374302824625,
+      "vote_count": 47165
     },
     {
-      "model_name": "gpt-5.2",
+      "model_name": "gpt-5.5",
       "organization": "openai",
       "rank": 8,
-      "rating": 1474.5786499029564,
-      "vote_count": 76972
-    },
-    {
-      "model_name": "gpt-5.4",
-      "organization": "openai",
-      "rank": 10,
-      "rating": 1476.483648135816,
-      "vote_count": 61783
+      "rating": 1480.7064278779114,
+      "vote_count": 48273
     },
     {
       "model_name": "claude-opus-4-6",
       "organization": "anthropic",
       "rank": 10,
-      "rating": 1471.7635962845952,
-      "vote_count": 66604
+      "rating": 1471.6600684067757,
+      "vote_count": 67681
     },
     {
-      "model_name": "gpt-5.4-mini-high",
-      "organization": "openai",
+      "model_name": "claude-fable-5",
+      "organization": "anthropic",
       "rank": 11,
-      "rating": 1469.6559149462296,
-      "vote_count": 57600
-    },
-    {
-      "model_name": "qwen3.7-max-preview",
-      "organization": "alibaba",
-      "rank": 11,
-      "rating": 1475.5459547542555,
-      "vote_count": 3714
+      "rating": 1471.5352792712451,
+      "vote_count": 15738
     },
     {
       "model_name": "gpt-5.1",
       "organization": "openai",
       "rank": 11,
-      "rating": 1472.1904716615213,
-      "vote_count": 42489
+      "rating": 1472.1302546977126,
+      "vote_count": 42424
     },
     {
       "model_name": "claude-opus-4-7-thinking",
       "organization": "anthropic",
       "rank": 11,
-      "rating": 1476.1783163312489,
-      "vote_count": 50483
+      "rating": 1476.6286439086985,
+      "vote_count": 51729
     },
     {
-      "model_name": "gpt-5.4-nano-high",
+      "model_name": "gpt-5.4",
       "organization": "openai",
+      "rank": 12,
+      "rating": 1476.1323665241362,
+      "vote_count": 62887
+    },
+    {
+      "model_name": "qwen3.7-max-preview",
+      "organization": "alibaba",
+      "rank": 12,
+      "rating": 1475.122538365545,
+      "vote_count": 3698
+    },
+    {
+      "model_name": "muse-spark",
+      "organization": "meta",
       "rank": 13,
-      "rating": 1466.676866064542,
-      "vote_count": 56555
+      "rating": 1473.0223273775778,
+      "vote_count": 13497
     },
     {
       "model_name": "grok-4.5",
       "organization": "xai",
       "rank": 13,
-      "rating": 1468.5753888429213,
-      "vote_count": 7668
+      "rating": 1478.8141398495086,
+      "vote_count": 9440
+    },
+    {
+      "model_name": "gpt-5.4-nano-high",
+      "organization": "openai",
+      "rank": 13,
+      "rating": 1466.7093146923496,
+      "vote_count": 57805
+    },
+    {
+      "model_name": "gpt-5.4-mini-high",
+      "organization": "openai",
+      "rank": 14,
+      "rating": 1468.8016098084,
+      "vote_count": 58846
+    },
+    {
+      "model_name": "claude-opus-4-7",
+      "organization": "anthropic",
+      "rank": 14,
+      "rating": 1473.5396561669468,
+      "vote_count": 52865
     },
     {
       "model_name": "gpt-5.5-instant",
       "organization": "openai",
       "rank": 14,
-      "rating": 1465.5088969139706,
-      "vote_count": 25995
-    },
-    {
-      "model_name": "muse-spark",
-      "organization": "meta",
-      "rank": 14,
-      "rating": 1472.7589347308517,
-      "vote_count": 13565
-    },
-    {
-      "model_name": "muse-spark-1.1",
-      "organization": "meta",
-      "rank": 14,
-      "rating": 1473.9161237058543,
-      "vote_count": 7777
-    },
-    {
-      "model_name": "gpt-5.1-high",
-      "organization": "openai",
-      "rank": 15,
-      "rating": 1466.3042148680997,
-      "vote_count": 39938
-    },
-    {
-      "model_name": "claude-opus-4-7",
-      "organization": "anthropic",
-      "rank": 15,
-      "rating": 1473.893075051746,
-      "vote_count": 51584
-    },
-    {
-      "model_name": "gpt-5.2-chat-latest-20260210",
-      "organization": "openai",
-      "rank": 15,
-      "rating": 1465.3183405123264,
-      "vote_count": 34116
-    },
-    {
-      "model_name": "gemini-3-pro",
-      "organization": "google",
-      "rank": 15,
-      "rating": 1464.6892367753467,
-      "vote_count": 40384
-    },
-    {
-      "model_name": "claude-opus-4-6-thinking",
-      "organization": "anthropic",
-      "rank": 16,
-      "rating": 1464.608876972533,
-      "vote_count": 62772
+      "rating": 1465.3990920863555,
+      "vote_count": 25720
     },
     {
       "model_name": "gpt-5-high",
       "organization": "openai",
-      "rank": 16,
-      "rating": 1465.2081262145198,
-      "vote_count": 6849
+      "rank": 15,
+      "rating": 1465.3056648153379,
+      "vote_count": 6848
     },
     {
-      "model_name": "gpt-5.4-high",
-      "organization": "openai",
-      "rank": 16,
-      "rating": 1469.9203239665292,
-      "vote_count": 58997
-    },
-    {
-      "model_name": "gemini-3.5-flash-high",
+      "model_name": "gemini-3.5-flash-medium",
       "organization": "google",
-      "rank": 16,
-      "rating": 1464.3055298400936,
-      "vote_count": 10092
+      "rank": 15,
+      "rating": 1472.5538155287231,
+      "vote_count": 15883
+    },
+    {
+      "model_name": "gemini-3.6-flash",
+      "organization": "google",
+      "rank": 15,
+      "rating": 1473.0770760452015,
+      "vote_count": 5630
+    },
+    {
+      "model_name": "claude-opus-4-6-thinking",
+      "organization": "anthropic",
+      "rank": 15,
+      "rating": 1464.8922546685415,
+      "vote_count": 63995
     },
     {
       "model_name": "gemini-2.5-flash",
       "organization": "google",
-      "rank": 17,
-      "rating": 1465.0986168803845,
-      "vote_count": 68650
+      "rank": 16,
+      "rating": 1465.0306261606715,
+      "vote_count": 68386
     },
     {
-      "model_name": "claude-opus-4-8",
+      "model_name": "kimi-k3-max",
+      "organization": "moonshot",
+      "rank": 16,
+      "rating": 1471.203971429806,
+      "vote_count": 3515
+    },
+    {
+      "model_name": "gpt-5.1-high",
+      "organization": "openai",
+      "rank": 16,
+      "rating": 1466.1411314481734,
+      "vote_count": 39873
+    },
+    {
+      "model_name": "gemini-3-pro",
+      "organization": "google",
+      "rank": 16,
+      "rating": 1464.5682805032739,
+      "vote_count": 40357
+    },
+    {
+      "model_name": "gpt-5.4-high",
+      "organization": "openai",
+      "rank": 17,
+      "rating": 1470.1325469675203,
+      "vote_count": 60260
+    },
+    {
+      "model_name": "gpt-5.2-chat-latest-20260210",
+      "organization": "openai",
+      "rank": 17,
+      "rating": 1464.9924276316483,
+      "vote_count": 33773
+    },
+    {
+      "model_name": "gemini-3.5-flash-high",
+      "organization": "google",
+      "rank": 17,
+      "rating": 1464.2508726262909,
+      "vote_count": 10016
+    },
+    {
+      "model_name": "claude-opus-5-high",
       "organization": "anthropic",
       "rank": 17,
-      "rating": 1463.2404323737037,
-      "vote_count": 31460
+      "rating": 1463.7074965558168,
+      "vote_count": 5344
     },
     {
       "model_name": "gpt-5.5-high",
       "organization": "openai",
-      "rank": 17,
-      "rating": 1469.484140204732,
-      "vote_count": 45760
+      "rank": 18,
+      "rating": 1469.5454458633903,
+      "vote_count": 47183
     },
     {
       "model_name": "gemini-3.1-pro-preview",
       "organization": "google",
-      "rank": 17,
-      "rating": 1470.8816406480305,
-      "vote_count": 84142
-    },
-    {
-      "model_name": "gpt-5.3-chat-latest",
-      "organization": "openai",
       "rank": 18,
-      "rating": 1462.4062835572813,
-      "vote_count": 32788
+      "rating": 1470.898656164026,
+      "vote_count": 85786
     },
     {
       "model_name": "gpt-5-mini-high",
       "organization": "openai",
       "rank": 18,
-      "rating": 1464.7005580494958,
-      "vote_count": 6784
+      "rating": 1464.8061989214395,
+      "vote_count": 6780
     },
     {
-      "model_name": "kimi-k3",
-      "organization": "moonshot",
+      "model_name": "claude-opus-4-8",
+      "organization": "anthropic",
       "rank": 18,
-      "rating": 1461.5093671554691,
-      "vote_count": 3564
+      "rating": 1462.9928081853056,
+      "vote_count": 32865
     },
     {
       "model_name": "ernie-5.1",
       "organization": "baidu",
-      "rank": 18,
-      "rating": 1467.4428692130314,
-      "vote_count": 37418
-    },
-    {
-      "model_name": "gemini-2.5-pro",
-      "organization": "google",
       "rank": 19,
-      "rating": 1460.8949823914236,
-      "vote_count": 67999
-    },
-    {
-      "model_name": "claude-fable-5",
-      "organization": "anthropic",
-      "rank": 19,
-      "rating": 1462.2215420241696,
-      "vote_count": 14575
-    },
-    {
-      "model_name": "claude-opus-4-8-thinking",
-      "organization": "anthropic",
-      "rank": 19,
-      "rating": 1464.6788850806106,
-      "vote_count": 30752
-    },
-    {
-      "model_name": "gemini-3-flash",
-      "organization": "google",
-      "rank": 19,
-      "rating": 1466.1765021055444,
-      "vote_count": 30682
+      "rating": 1467.5174503297021,
+      "vote_count": 36919
     },
     {
       "model_name": "gpt-5.6-sol-xhigh",
       "organization": "openai",
       "rank": 19,
-      "rating": 1469.9428067803722,
-      "vote_count": 6117
+      "rating": 1470.6401240130083,
+      "vote_count": 7848
     },
     {
-      "model_name": "gemini-3.6-flash",
-      "organization": "google",
-      "rank": 20,
-      "rating": 1460.768518903617,
-      "vote_count": 4747
+      "model_name": "claude-opus-4-8-thinking",
+      "organization": "anthropic",
+      "rank": 19,
+      "rating": 1464.6463916793743,
+      "vote_count": 32237
     },
     {
       "model_name": "qwen3.5-max-preview",
       "organization": "alibaba",
-      "rank": 20,
-      "rating": 1461.8126456996392,
-      "vote_count": 21444
+      "rank": 19,
+      "rating": 1462.2750118505894,
+      "vote_count": 21268
     },
     {
-      "model_name": "gemini-3.5-flash-medium",
+      "model_name": "gemini-2.5-pro",
+      "organization": "google",
+      "rank": 19,
+      "rating": 1461.1664943083993,
+      "vote_count": 67753
+    },
+    {
+      "model_name": "gemini-3-flash",
       "organization": "google",
       "rank": 20,
-      "rating": 1467.587661330939,
-      "vote_count": 13949
+      "rating": 1466.0329625216086,
+      "vote_count": 30649
     },
     {
-      "model_name": "glm-5.1",
-      "organization": "zai",
+      "model_name": "muse-spark-1.1",
+      "organization": "meta",
       "rank": 20,
-      "rating": 1465.471014792492,
-      "vote_count": 30726
+      "rating": 1469.3624082264198,
+      "vote_count": 9396
     },
     {
-      "model_name": "trinity-large-preview",
-      "organization": "",
+      "model_name": "claude-opus-4-5-20251101-thinking-32k",
+      "organization": "anthropic",
       "rank": 20,
-      "rating": 1463.7495002728322,
-      "vote_count": 29783
+      "rating": 1463.5155568238602,
+      "vote_count": 36134
+    },
+    {
+      "model_name": "gpt-5.3-chat-latest",
+      "organization": "openai",
+      "rank": 20,
+      "rating": 1462.189615734735,
+      "vote_count": 32443
+    },
+    {
+      "model_name": "gpt-5.2",
+      "organization": "openai",
+      "rank": 20,
+      "rating": 1461.0885845741432,
+      "vote_count": 78070
     }
   ],
   "coding": [
@@ -286,728 +286,748 @@
       "model_name": "grok-4-0709",
       "organization": "xai",
       "rank": 1,
-      "rating": 1569.7997786255378,
-      "vote_count": 1321
+      "rating": 1570.1056291984366,
+      "vote_count": 1320
     },
     {
-      "model_name": "claude-opus-4-7",
+      "model_name": "claude-opus-5-high",
       "organization": "anthropic",
-      "rank": 7,
-      "rating": 1533.0655527046408,
-      "vote_count": 13860
+      "rank": 3,
+      "rating": 1540.1740114296929,
+      "vote_count": 1393
     },
     {
       "model_name": "claude-opus-4-6-thinking",
       "organization": "anthropic",
+      "rank": 6,
+      "rating": 1529.4367970102335,
+      "vote_count": 14616
+    },
+    {
+      "model_name": "claude-opus-4-6",
+      "organization": "anthropic",
       "rank": 7,
-      "rating": 1527.999614728026,
-      "vote_count": 14279
+      "rating": 1530.3350070220106,
+      "vote_count": 16704
     },
     {
       "model_name": "gpt-5-chat",
       "organization": "openai",
       "rank": 7,
-      "rating": 1536.6314245112358,
+      "rating": 1536.8800565340102,
       "vote_count": 896
-    },
-    {
-      "model_name": "claude-opus-4-6",
-      "organization": "anthropic",
-      "rank": 8,
-      "rating": 1529.948009337258,
-      "vote_count": 16310
     },
     {
       "model_name": "gpt-5.3-chat-latest",
       "organization": "openai",
       "rank": 8,
-      "rating": 1534.0530972996628,
-      "vote_count": 7092
+      "rating": 1535.6416841702564,
+      "vote_count": 6991
+    },
+    {
+      "model_name": "claude-opus-4-7",
+      "organization": "anthropic",
+      "rank": 8,
+      "rating": 1533.3188768886807,
+      "vote_count": 14204
     },
     {
       "model_name": "gpt-5.2-high",
       "organization": "openai",
       "rank": 9,
-      "rating": 1526.6779688425704,
-      "vote_count": 8728
+      "rating": 1526.5250506567165,
+      "vote_count": 8660
     },
     {
-      "model_name": "kimi-k3",
+      "model_name": "kimi-k3-max",
       "organization": "moonshot",
-      "rank": 9,
-      "rating": 1499.0592484964327,
-      "vote_count": 972
-    },
-    {
-      "model_name": "qwen3.7-max-preview",
-      "organization": "alibaba",
       "rank": 10,
-      "rating": 1499.0027071571913,
-      "vote_count": 1121
-    },
-    {
-      "model_name": "gpt-5.1",
-      "organization": "openai",
-      "rank": 10,
-      "rating": 1522.485361714383,
-      "vote_count": 5624
-    },
-    {
-      "model_name": "gpt-5.4",
-      "organization": "openai",
-      "rank": 11,
-      "rating": 1526.409167601071,
-      "vote_count": 15783
+      "rating": 1533.0747340518178,
+      "vote_count": 934
     },
     {
       "model_name": "claude-opus-4-7-thinking",
       "organization": "anthropic",
+      "rank": 11,
+      "rating": 1521.262630444787,
+      "vote_count": 13951
+    },
+    {
+      "model_name": "qwen3.7-max-preview",
+      "organization": "alibaba",
+      "rank": 11,
+      "rating": 1498.5405444050473,
+      "vote_count": 1113
+    },
+    {
+      "model_name": "gpt-5.1",
+      "organization": "openai",
+      "rank": 11,
+      "rating": 1522.3511341820947,
+      "vote_count": 5614
+    },
+    {
+      "model_name": "claude-opus-4-8",
+      "organization": "anthropic",
       "rank": 12,
-      "rating": 1522.7858107155416,
-      "vote_count": 13615
+      "rating": 1520.4848594119887,
+      "vote_count": 9205
+    },
+    {
+      "model_name": "gpt-5.4",
+      "organization": "openai",
+      "rank": 12,
+      "rating": 1526.3536689408452,
+      "vote_count": 16174
+    },
+    {
+      "model_name": "gpt-5.4-high",
+      "organization": "openai",
+      "rank": 13,
+      "rating": 1496.446064948778,
+      "vote_count": 16346
+    },
+    {
+      "model_name": "claude-sonnet-4-6",
+      "organization": "anthropic",
+      "rank": 13,
+      "rating": 1520.3059410541061,
+      "vote_count": 14616
     },
     {
       "model_name": "claude-fable-5",
       "organization": "anthropic",
-      "rank": 12,
-      "rating": 1521.2672528805297,
-      "vote_count": 3943
-    },
-    {
-      "model_name": "muse-spark-1.1",
-      "organization": "meta",
-      "rank": 13,
-      "rating": 1523.9723255805313,
-      "vote_count": 2291
+      "rank": 14,
+      "rating": 1519.6565331119468,
+      "vote_count": 4252
     },
     {
       "model_name": "claude-opus-4-5-20251101-thinking-32k",
       "organization": "anthropic",
       "rank": 14,
-      "rating": 1530.4061798460086,
-      "vote_count": 4685
-    },
-    {
-      "model_name": "claude-sonnet-5-high",
-      "organization": "anthropic",
-      "rank": 14,
-      "rating": 1519.166377616444,
-      "vote_count": 3714
+      "rating": 1530.5794799109672,
+      "vote_count": 4679
     },
     {
       "model_name": "gpt-5.5",
       "organization": "openai",
       "rank": 14,
-      "rating": 1523.6289468212228,
-      "vote_count": 12703
+      "rating": 1523.4775874131858,
+      "vote_count": 13057
     },
     {
-      "model_name": "gpt-5.4-high",
-      "organization": "openai",
-      "rank": 14,
-      "rating": 1495.5040783995496,
-      "vote_count": 15981
-    },
-    {
-      "model_name": "gpt-5.4-mini-high",
-      "organization": "openai",
+      "model_name": "claude-sonnet-5-high",
+      "organization": "anthropic",
       "rank": 15,
-      "rating": 1518.904790795257,
-      "vote_count": 14361
+      "rating": 1519.5054678509598,
+      "vote_count": 4203
     },
     {
       "model_name": "gpt-5.5-high",
       "organization": "openai",
       "rank": 15,
-      "rating": 1495.293152823912,
-      "vote_count": 12674
-    },
-    {
-      "model_name": "gemini-3.6-flash",
-      "organization": "google",
-      "rank": 16,
-      "rating": 1522.5553817402945,
-      "vote_count": 1480
+      "rating": 1495.22732516094,
+      "vote_count": 13086
     },
     {
       "model_name": "claude-opus-4-1-20250805",
       "organization": "anthropic",
-      "rank": 16,
-      "rating": 1529.903657734164,
-      "vote_count": 5033
+      "rank": 15,
+      "rating": 1530.108258741075,
+      "vote_count": 5036
     },
     {
-      "model_name": "glm-5.1",
-      "organization": "zai",
+      "model_name": "muse-spark-1.1",
+      "organization": "meta",
+      "rank": 15,
+      "rating": 1528.148785525976,
+      "vote_count": 2808
+    },
+    {
+      "model_name": "gpt-5.6-sol-xhigh",
+      "organization": "openai",
       "rank": 16,
-      "rating": 1493.019244133835,
-      "vote_count": 8657
+      "rating": 1522.5387557927588,
+      "vote_count": 2202
     },
     {
       "model_name": "gpt-5.1-high",
       "organization": "openai",
       "rank": 16,
-      "rating": 1518.6853599732644,
-      "vote_count": 5009
+      "rating": 1518.7019765888792,
+      "vote_count": 5004
     },
     {
       "model_name": "gpt-5.4-nano-high",
       "organization": "openai",
       "rank": 17,
-      "rating": 1526.788859188991,
-      "vote_count": 14665
-    },
-    {
-      "model_name": "claude-sonnet-4-5-20250929",
-      "organization": "anthropic",
-      "rank": 17,
-      "rating": 1521.847887630821,
-      "vote_count": 13014
+      "rating": 1529.2591976151884,
+      "vote_count": 15099
     },
     {
       "model_name": "gemma-4-31b",
       "organization": "google",
       "rank": 17,
-      "rating": 1518.2286669907764,
-      "vote_count": 1361
+      "rating": 1518.5486113805225,
+      "vote_count": 1350
+    },
+    {
+      "model_name": "glm-5.1",
+      "organization": "zai",
+      "rank": 17,
+      "rating": 1493.203330360529,
+      "vote_count": 9070
     },
     {
       "model_name": "gpt-5.2",
       "organization": "openai",
       "rank": 18,
-      "rating": 1517.5494199760076,
-      "vote_count": 17232
+      "rating": 1518.086240369457,
+      "vote_count": 17625
     },
     {
-      "model_name": "gemini-3.5-flash-high",
-      "organization": "google",
+      "model_name": "claude-sonnet-4-5-20250929",
+      "organization": "anthropic",
       "rank": 18,
-      "rating": 1521.69759426593,
-      "vote_count": 2996
+      "rating": 1521.9248044522724,
+      "vote_count": 12912
     },
     {
       "model_name": "claude-opus-4-5-20251101",
       "organization": "anthropic",
       "rank": 18,
-      "rating": 1525.2933475201942,
-      "vote_count": 12762
-    },
-    {
-      "model_name": "trinity-large-preview",
-      "organization": "",
-      "rank": 19,
-      "rating": 1524.4458729238675,
-      "vote_count": 5736
-    },
-    {
-      "model_name": "qwen3.5-max-preview",
-      "organization": "alibaba",
-      "rank": 19,
-      "rating": 1521.212919099733,
-      "vote_count": 5046
+      "rating": 1526.294453725193,
+      "vote_count": 12653
     },
     {
       "model_name": "mimo-v2.5-pro",
       "organization": "xiaomi",
-      "rank": 19,
-      "rating": 1517.7248003644495,
-      "vote_count": 10968
-    },
-    {
-      "model_name": "claude-sonnet-4-6",
-      "organization": "anthropic",
-      "rank": 19,
-      "rating": 1517.4334160048452,
-      "vote_count": 14265
-    },
-    {
-      "model_name": "gpt-5.6-sol-xhigh",
-      "organization": "openai",
-      "rank": 19,
-      "rating": 1489.8956328118384,
-      "vote_count": 1770
-    },
-    {
-      "model_name": "gpt-5.2-chat-latest-20260210",
-      "organization": "openai",
-      "rank": 20,
-      "rating": 1523.020686832054,
-      "vote_count": 6991
+      "rank": 18,
+      "rating": 1518.6120194708976,
+      "vote_count": 11363
     },
     {
       "model_name": "gemini-3-pro",
       "organization": "google",
-      "rank": 20,
-      "rating": 1522.914769247556,
-      "vote_count": 5541
+      "rank": 19,
+      "rating": 1518.183844076193,
+      "vote_count": 5535
     },
     {
-      "model_name": "claude-opus-4-8-thinking",
-      "organization": "anthropic",
-      "rank": 20,
-      "rating": 1517.261337495348,
-      "vote_count": 8532
+      "model_name": "gemini-3.5-flash-high",
+      "organization": "google",
+      "rank": 19,
+      "rating": 1521.5803809010768,
+      "vote_count": 2936
+    },
+    {
+      "model_name": "grok-4.5",
+      "organization": "xai",
+      "rank": 19,
+      "rating": 1524.8893537467247,
+      "vote_count": 2775
+    },
+    {
+      "model_name": "gpt-5.4-mini-high",
+      "organization": "openai",
+      "rank": 19,
+      "rating": 1517.7043612280604,
+      "vote_count": 14747
     },
     {
       "model_name": "claude-sonnet-4-5-20250929-thinking-32k",
       "organization": "anthropic",
       "rank": 20,
-      "rating": 1516.6098752694284,
-      "vote_count": 12171
-    },
-    {
-      "model_name": "gemini-3.5-flash-medium",
-      "organization": "google",
-      "rank": 20,
-      "rating": 1489.515752296602,
-      "vote_count": 4231
-    },
-    {
-      "model_name": "claude-opus-4-8",
-      "organization": "anthropic",
-      "rank": 20,
-      "rating": 1521.1526111561548,
-      "vote_count": 8794
-    }
-  ],
-  "math": [
-    {
-      "model_name": "gemini-3.5-flash-high",
-      "organization": "google",
-      "rank": 2,
-      "rating": 1521.8125767391466,
-      "vote_count": 572
-    },
-    {
-      "model_name": "gemini-3.6-flash",
-      "organization": "google",
-      "rank": 3,
-      "rating": 1519.0092765913578,
-      "vote_count": 226
-    },
-    {
-      "model_name": "qwen3.7-max-preview",
-      "organization": "alibaba",
-      "rank": 7,
-      "rating": 1495.2169004364373,
-      "vote_count": 219
-    },
-    {
-      "model_name": "grok-4.5",
-      "organization": "xai",
-      "rank": 8,
-      "rating": 1490.35663260592,
-      "vote_count": 322
-    },
-    {
-      "model_name": "gpt-5.1",
-      "organization": "openai",
-      "rank": 8,
-      "rating": 1481.0675137408125,
-      "vote_count": 1606
-    },
-    {
-      "model_name": "claude-opus-4-6",
-      "organization": "anthropic",
-      "rank": 9,
-      "rating": 1477.6586034789457,
-      "vote_count": 2739
-    },
-    {
-      "model_name": "gpt-5.2",
-      "organization": "openai",
-      "rank": 9,
-      "rating": 1480.6209190123673,
-      "vote_count": 3051
-    },
-    {
-      "model_name": "gpt-5.4-high",
-      "organization": "openai",
-      "rank": 10,
-      "rating": 1489.652198885859,
-      "vote_count": 3090
-    },
-    {
-      "model_name": "claude-opus-4-7",
-      "organization": "anthropic",
-      "rank": 11,
-      "rating": 1478.2871305866847,
-      "vote_count": 2137
-    },
-    {
-      "model_name": "gpt-5.4",
-      "organization": "openai",
-      "rank": 12,
-      "rating": 1477.0665519552058,
-      "vote_count": 2559
-    },
-    {
-      "model_name": "gemini-3.5-flash-medium",
-      "organization": "google",
-      "rank": 12,
-      "rating": 1488.4650051994176,
-      "vote_count": 657
-    },
-    {
-      "model_name": "claude-fable-5",
-      "organization": "anthropic",
-      "rank": 12,
-      "rating": 1485.5690727995798,
-      "vote_count": 648
-    },
-    {
-      "model_name": "claude-opus-4-1-20250805",
-      "organization": "anthropic",
-      "rank": 14,
-      "rating": 1469.293856385235,
-      "vote_count": 1356
-    },
-    {
-      "model_name": "gpt-5.5",
-      "organization": "openai",
-      "rank": 14,
-      "rating": 1482.119510071113,
-      "vote_count": 2436
-    },
-    {
-      "model_name": "gemini-3.1-pro-preview",
-      "organization": "google",
-      "rank": 14,
-      "rating": 1468.3037227001369,
-      "vote_count": 3611
-    },
-    {
-      "model_name": "gpt-5.4-mini-high",
-      "organization": "openai",
-      "rank": 15,
-      "rating": 1468.2813830455007,
-      "vote_count": 2386
-    },
-    {
-      "model_name": "gpt-5.4-nano-high",
-      "organization": "openai",
-      "rank": 15,
-      "rating": 1478.1774067533113,
-      "vote_count": 2309
-    },
-    {
-      "model_name": "gemini-3-pro",
-      "organization": "google",
-      "rank": 16,
-      "rating": 1476.613719069227,
-      "vote_count": 2651
-    },
-    {
-      "model_name": "minimax-m2.1-preview",
-      "organization": "minimax",
-      "rank": 16,
-      "rating": 1468.2957866860327,
-      "vote_count": 549
-    },
-    {
-      "model_name": "gpt-5.2-high",
-      "organization": "openai",
-      "rank": 16,
-      "rating": 1468.191048996895,
-      "vote_count": 1943
-    },
-    {
-      "model_name": "qwen3.5-max-preview",
-      "organization": "alibaba",
-      "rank": 16,
-      "rating": 1466.5386774390354,
-      "vote_count": 982
-    },
-    {
-      "model_name": "claude-opus-4-5-20251101-thinking-32k",
-      "organization": "anthropic",
-      "rank": 17,
-      "rating": 1468.132480185025,
-      "vote_count": 1353
-    },
-    {
-      "model_name": "gpt-5.2-chat-latest-20260210",
-      "organization": "openai",
-      "rank": 17,
-      "rating": 1465.6133450980365,
-      "vote_count": 1372
-    },
-    {
-      "model_name": "gpt-5.5-high",
-      "organization": "openai",
-      "rank": 17,
-      "rating": 1477.6743771419751,
-      "vote_count": 1907
-    },
-    {
-      "model_name": "gpt-5.3-chat-latest",
-      "organization": "openai",
-      "rank": 18,
-      "rating": 1463.7338799889735,
-      "vote_count": 1411
-    },
-    {
-      "model_name": "glm-5.1",
-      "organization": "zai",
-      "rank": 18,
-      "rating": 1469.5794124959248,
-      "vote_count": 1285
-    },
-    {
-      "model_name": "inkling",
-      "organization": "thinky",
-      "rank": 18,
-      "rating": 1474.8912361117848,
-      "vote_count": 217
-    },
-    {
-      "model_name": "deepseek-v4-flash-thinking",
-      "organization": "deepseek",
-      "rank": 18,
-      "rating": 1463.9469355889717,
-      "vote_count": 1851
+      "rating": 1516.5833691233802,
+      "vote_count": 12087
     },
     {
       "model_name": "claude-opus-4-8-thinking",
       "organization": "anthropic",
-      "rank": 19,
-      "rating": 1463.1601226814387,
-      "vote_count": 1335
+      "rank": 20,
+      "rating": 1520.7462920433213,
+      "vote_count": 8981
     },
     {
-      "model_name": "gemini-3-flash",
-      "organization": "google",
-      "rank": 19,
-      "rating": 1466.1081988010374,
-      "vote_count": 1279
-    },
-    {
-      "model_name": "glm-5.2 (max)",
-      "organization": "zai",
-      "rank": 19,
-      "rating": 1473.568896656448,
-      "vote_count": 751
-    },
-    {
-      "model_name": "qwen3.7-plus",
+      "model_name": "qwen3.5-max-preview",
       "organization": "alibaba",
-      "rank": 19,
-      "rating": 1469.497717275462,
-      "vote_count": 860
-    },
-    {
-      "model_name": "mimo-v2.5-pro",
-      "organization": "xiaomi",
-      "rank": 19,
-      "rating": 1474.63111252073,
-      "vote_count": 2084
+      "rank": 20,
+      "rating": 1523.7960393563126,
+      "vote_count": 4986
     },
     {
       "model_name": "trinity-large-preview",
       "organization": "",
-      "rank": 19,
-      "rating": 1463.3084430042964,
-      "vote_count": 1211
+      "rank": 20,
+      "rating": 1522.8791655011669,
+      "vote_count": 5651
     },
     {
-      "model_name": "claude-opus-4-7-thinking",
-      "organization": "anthropic",
+      "model_name": "gemini-3.6-flash",
+      "organization": "google",
       "rank": 20,
-      "rating": 1463.1214498824934,
-      "vote_count": 2061
-    },
-    {
-      "model_name": "claude-opus-4-6-thinking",
-      "organization": "anthropic",
-      "rank": 20,
-      "rating": 1462.6920288085034,
-      "vote_count": 2395
-    },
-    {
-      "model_name": "claude-opus-4-8",
-      "organization": "anthropic",
-      "rank": 20,
-      "rating": 1469.7002816797135,
-      "vote_count": 1305
+      "rating": 1518.141395304818,
+      "vote_count": 1731
     },
     {
       "model_name": "ernie-5.1",
       "organization": "baidu",
       "rank": 20,
-      "rating": 1466.162448773528,
-      "vote_count": 1589
+      "rating": 1488.5729307363824,
+      "vote_count": 10243
+    }
+  ],
+  "math": [
+    {
+      "model_name": "claude-opus-5-high",
+      "organization": "anthropic",
+      "rank": 1,
+      "rating": 1537.7394498700455,
+      "vote_count": 226
+    },
+    {
+      "model_name": "gemini-3.5-flash-high",
+      "organization": "google",
+      "rank": 3,
+      "rating": 1524.596386542271,
+      "vote_count": 564
+    },
+    {
+      "model_name": "gemini-3.6-flash",
+      "organization": "google",
+      "rank": 5,
+      "rating": 1509.0321828905044,
+      "vote_count": 258
+    },
+    {
+      "model_name": "gpt-5.1",
+      "organization": "openai",
+      "rank": 7,
+      "rating": 1480.65453317732,
+      "vote_count": 1603
+    },
+    {
+      "model_name": "qwen3.7-max-preview",
+      "organization": "alibaba",
+      "rank": 8,
+      "rating": 1493.58541322285,
+      "vote_count": 218
+    },
+    {
+      "model_name": "gpt-5.2",
+      "organization": "openai",
+      "rank": 8,
+      "rating": 1479.7617813584786,
+      "vote_count": 3077
+    },
+    {
+      "model_name": "gpt-5.4-high",
+      "organization": "openai",
+      "rank": 9,
+      "rating": 1489.5882739833892,
+      "vote_count": 3150
+    },
+    {
+      "model_name": "claude-opus-4-7",
+      "organization": "anthropic",
+      "rank": 11,
+      "rating": 1477.946782264221,
+      "vote_count": 2194
+    },
+    {
+      "model_name": "claude-opus-4-8-thinking",
+      "organization": "anthropic",
+      "rank": 12,
+      "rating": 1470.869122310346,
+      "vote_count": 1380
+    },
+    {
+      "model_name": "grok-4.5",
+      "organization": "xai",
+      "rank": 13,
+      "rating": 1483.2568657262045,
+      "vote_count": 392
     },
     {
       "model_name": "glm-5",
       "organization": "zai",
-      "rank": 20,
-      "rating": 1464.0895209548548,
-      "vote_count": 1152
+      "rank": 13,
+      "rating": 1473.4045923440028,
+      "vote_count": 1150
+    },
+    {
+      "model_name": "gpt-5.4",
+      "organization": "openai",
+      "rank": 14,
+      "rating": 1476.4773465112403,
+      "vote_count": 2588
+    },
+    {
+      "model_name": "gpt-5.5",
+      "organization": "openai",
+      "rank": 14,
+      "rating": 1482.315864304182,
+      "vote_count": 2477
+    },
+    {
+      "model_name": "gemini-3.1-pro-preview",
+      "organization": "google",
+      "rank": 14,
+      "rating": 1468.353283620686,
+      "vote_count": 3646
+    },
+    {
+      "model_name": "claude-fable-5",
+      "organization": "anthropic",
+      "rank": 14,
+      "rating": 1478.5738453946578,
+      "vote_count": 678
+    },
+    {
+      "model_name": "claude-opus-4-1-20250805",
+      "organization": "anthropic",
+      "rank": 14,
+      "rating": 1472.190286238095,
+      "vote_count": 1353
+    },
+    {
+      "model_name": "gpt-5.4-nano-high",
+      "organization": "openai",
+      "rank": 15,
+      "rating": 1477.7093404747975,
+      "vote_count": 2352
+    },
+    {
+      "model_name": "gemini-3.5-flash-medium",
+      "organization": "google",
+      "rank": 15,
+      "rating": 1468.342921018288,
+      "vote_count": 571
+    },
+    {
+      "model_name": "minimax-m2.1-preview",
+      "organization": "minimax",
+      "rank": 16,
+      "rating": 1468.114494215044,
+      "vote_count": 548
+    },
+    {
+      "model_name": "claude-opus-4-5-20251101-thinking-32k",
+      "organization": "anthropic",
+      "rank": 16,
+      "rating": 1467.9150235811467,
+      "vote_count": 1350
+    },
+    {
+      "model_name": "qwen3.5-max-preview",
+      "organization": "alibaba",
+      "rank": 16,
+      "rating": 1466.529954665802,
+      "vote_count": 969
+    },
+    {
+      "model_name": "ernie-5.1",
+      "organization": "baidu",
+      "rank": 16,
+      "rating": 1478.8295946261364,
+      "vote_count": 1882
+    },
+    {
+      "model_name": "gpt-5.2-chat-latest-20260210",
+      "organization": "openai",
+      "rank": 17,
+      "rating": 1465.333780815337,
+      "vote_count": 1361
+    },
+    {
+      "model_name": "gpt-5.2-high",
+      "organization": "openai",
+      "rank": 17,
+      "rating": 1467.8454010154755,
+      "vote_count": 1933
+    },
+    {
+      "model_name": "glm-5.1",
+      "organization": "zai",
+      "rank": 17,
+      "rating": 1473.0173010246526,
+      "vote_count": 1337
+    },
+    {
+      "model_name": "claude-opus-4-8",
+      "organization": "anthropic",
+      "rank": 18,
+      "rating": 1471.6000877698598,
+      "vote_count": 1353
+    },
+    {
+      "model_name": "inkling",
+      "organization": "thinky",
+      "rank": 18,
+      "rating": 1477.8200387437346,
+      "vote_count": 289
+    },
+    {
+      "model_name": "gpt-5.5-high",
+      "organization": "openai",
+      "rank": 18,
+      "rating": 1476.0989073051505,
+      "vote_count": 1946
+    },
+    {
+      "model_name": "gpt-5.4-mini-high",
+      "organization": "openai",
+      "rank": 18,
+      "rating": 1467.244001604865,
+      "vote_count": 2420
+    },
+    {
+      "model_name": "claude-opus-4-6-thinking",
+      "organization": "anthropic",
+      "rank": 18,
+      "rating": 1463.8222201821309,
+      "vote_count": 2436
+    },
+    {
+      "model_name": "claude-opus-4-7-thinking",
+      "organization": "anthropic",
+      "rank": 18,
+      "rating": 1463.415462489731,
+      "vote_count": 2088
+    },
+    {
+      "model_name": "gemini-3-pro",
+      "organization": "google",
+      "rank": 19,
+      "rating": 1476.173943969447,
+      "vote_count": 2641
+    },
+    {
+      "model_name": "glm-5.2-max",
+      "organization": "zai",
+      "rank": 19,
+      "rating": 1475.3947726343395,
+      "vote_count": 797
+    },
+    {
+      "model_name": "gpt-5.3-chat-latest",
+      "organization": "openai",
+      "rank": 19,
+      "rating": 1463.2547732978726,
+      "vote_count": 1396
     },
     {
       "model_name": "kimi-k2.6",
       "organization": "moonshot",
+      "rank": 19,
+      "rating": 1466.1801614475678,
+      "vote_count": 1622
+    },
+    {
+      "model_name": "trinity-large-preview",
+      "organization": "",
+      "rank": 19,
+      "rating": 1463.1532002110284,
+      "vote_count": 1194
+    },
+    {
+      "model_name": "qwen3.7-plus",
+      "organization": "alibaba",
       "rank": 20,
-      "rating": 1474.5373972670393,
-      "vote_count": 1936
+      "rating": 1467.67089797389,
+      "vote_count": 906
+    },
+    {
+      "model_name": "claude-opus-4-6",
+      "organization": "anthropic",
+      "rank": 20,
+      "rating": 1461.1002864736201,
+      "vote_count": 2758
+    },
+    {
+      "model_name": "mimo-v2.5-pro",
+      "organization": "xiaomi",
+      "rank": 20,
+      "rating": 1475.6121465627907,
+      "vote_count": 2129
+    },
+    {
+      "model_name": "gemini-3-flash",
+      "organization": "google",
+      "rank": 20,
+      "rating": 1465.9324267645102,
+      "vote_count": 1279
+    },
+    {
+      "model_name": "deepseek-v4-flash-thinking",
+      "organization": "deepseek",
+      "rank": 20,
+      "rating": 1462.9755006416276,
+      "vote_count": 1887
     }
   ],
   "changelog": {
-    "previous_snapshot_date": "2026-07-20",
-    "current_snapshot_date": "2026-07-21",
-    "headline": "grok-4-0709이 Coding 부문 20위→1위로 올라섰습니다",
+    "previous_snapshot_date": "2026-07-21",
+    "current_snapshot_date": "2026-07-26",
+    "headline": "claude-opus-5-high이 Math 부문 1위로 새로 진입했습니다",
     "overall": {
       "moved": [
         {
-          "model_name": "claude-opus-4-7",
-          "from_rank": 20,
-          "to_rank": 15
+          "model_name": "gpt-5.2",
+          "from_rank": 8,
+          "to_rank": 20
         },
         {
           "model_name": "claude-fable-5",
-          "from_rank": 14,
-          "to_rank": 19
-        },
-        {
-          "model_name": "claude-opus-4-8-thinking",
-          "from_rank": 16,
-          "to_rank": 19
+          "from_rank": 19,
+          "to_rank": 11
         },
         {
           "model_name": "muse-spark-1.1",
-          "from_rank": 12,
-          "to_rank": 14
-        },
-        {
-          "model_name": "gpt-5.6-sol-xhigh",
-          "from_rank": 17,
-          "to_rank": 19
-        },
-        {
-          "model_name": "claude-opus-4-8",
-          "from_rank": 18,
-          "to_rank": 17
-        },
-        {
-          "model_name": "ernie-5.1",
-          "from_rank": 17,
-          "to_rank": 18
-        },
-        {
-          "model_name": "gpt-5-mini-high",
-          "from_rank": 19,
-          "to_rank": 18
-        },
-        {
-          "model_name": "qwen3.7-max-preview",
-          "from_rank": 10,
-          "to_rank": 11
-        },
-        {
-          "model_name": "gpt-5.1",
-          "from_rank": 10,
-          "to_rank": 11
-        },
-        {
-          "model_name": "gpt-5.4",
-          "from_rank": 9,
-          "to_rank": 10
-        },
-        {
-          "model_name": "grok-4.5",
           "from_rank": 14,
-          "to_rank": 13
-        },
-        {
-          "model_name": "gpt-5.5",
-          "from_rank": 7,
-          "to_rank": 6
-        },
-        {
-          "model_name": "gpt-5.4-mini-high",
-          "from_rank": 12,
-          "to_rank": 11
-        },
-        {
-          "model_name": "gpt-5.5-instant",
-          "from_rank": 15,
-          "to_rank": 14
-        },
-        {
-          "model_name": "muse-spark",
-          "from_rank": 13,
-          "to_rank": 14
-        },
-        {
-          "model_name": "gpt-5.4-high",
-          "from_rank": 15,
-          "to_rank": 16
-        },
-        {
-          "model_name": "gpt-5.2-chat-latest-20260210",
-          "from_rank": 16,
-          "to_rank": 15
-        },
-        {
-          "model_name": "gemini-3-pro",
-          "from_rank": 16,
-          "to_rank": 15
-        },
-        {
-          "model_name": "gpt-5-high",
-          "from_rank": 17,
-          "to_rank": 16
-        },
-        {
-          "model_name": "claude-opus-4-6-thinking",
-          "from_rank": 17,
-          "to_rank": 16
-        },
-        {
-          "model_name": "gpt-5.5-high",
-          "from_rank": 16,
-          "to_rank": 17
-        },
-        {
-          "model_name": "gemini-3.1-pro-preview",
-          "from_rank": 18,
-          "to_rank": 17
-        },
-        {
-          "model_name": "gemini-2.5-flash",
-          "from_rank": 18,
-          "to_rank": 17
-        },
-        {
-          "model_name": "gpt-5.3-chat-latest",
-          "from_rank": 19,
-          "to_rank": 18
-        },
-        {
-          "model_name": "gemini-3-flash",
-          "from_rank": 20,
-          "to_rank": 19
-        },
-        {
-          "model_name": "glm-5.1",
-          "from_rank": 19,
           "to_rank": 20
         },
         {
           "model_name": "gemini-3.5-flash-medium",
+          "from_rank": 20,
+          "to_rank": 15
+        },
+        {
+          "model_name": "gemini-3.6-flash",
+          "from_rank": 20,
+          "to_rank": 15
+        },
+        {
+          "model_name": "gpt-5.4-mini-high",
+          "from_rank": 11,
+          "to_rank": 14
+        },
+        {
+          "model_name": "gpt-5.5",
+          "from_rank": 6,
+          "to_rank": 8
+        },
+        {
+          "model_name": "gpt-5.4",
+          "from_rank": 10,
+          "to_rank": 12
+        },
+        {
+          "model_name": "gpt-5.2-chat-latest-20260210",
+          "from_rank": 15,
+          "to_rank": 17
+        },
+        {
+          "model_name": "gpt-5.3-chat-latest",
+          "from_rank": 18,
+          "to_rank": 20
+        },
+        {
+          "model_name": "qwen3.7-max-preview",
+          "from_rank": 11,
+          "to_rank": 12
+        },
+        {
+          "model_name": "muse-spark",
+          "from_rank": 14,
+          "to_rank": 13
+        },
+        {
+          "model_name": "claude-opus-4-7",
+          "from_rank": 15,
+          "to_rank": 14
+        },
+        {
+          "model_name": "gpt-5-high",
+          "from_rank": 16,
+          "to_rank": 15
+        },
+        {
+          "model_name": "claude-opus-4-6-thinking",
+          "from_rank": 16,
+          "to_rank": 15
+        },
+        {
+          "model_name": "gpt-5.1-high",
+          "from_rank": 15,
+          "to_rank": 16
+        },
+        {
+          "model_name": "gemini-2.5-flash",
+          "from_rank": 17,
+          "to_rank": 16
+        },
+        {
+          "model_name": "gemini-3-pro",
+          "from_rank": 15,
+          "to_rank": 16
+        },
+        {
+          "model_name": "gpt-5.4-high",
+          "from_rank": 16,
+          "to_rank": 17
+        },
+        {
+          "model_name": "gemini-3.5-flash-high",
+          "from_rank": 16,
+          "to_rank": 17
+        },
+        {
+          "model_name": "gpt-5.5-high",
+          "from_rank": 17,
+          "to_rank": 18
+        },
+        {
+          "model_name": "gemini-3.1-pro-preview",
+          "from_rank": 17,
+          "to_rank": 18
+        },
+        {
+          "model_name": "claude-opus-4-8",
+          "from_rank": 17,
+          "to_rank": 18
+        },
+        {
+          "model_name": "ernie-5.1",
+          "from_rank": 18,
+          "to_rank": 19
+        },
+        {
+          "model_name": "qwen3.5-max-preview",
+          "from_rank": 20,
+          "to_rank": 19
+        },
+        {
+          "model_name": "gemini-3-flash",
           "from_rank": 19,
           "to_rank": 20
         }
       ],
       "entered": [
         {
-          "model_name": "gemini-3.6-flash",
+          "model_name": "kimi-k3-max",
+          "rank": 16
+        },
+        {
+          "model_name": "claude-opus-5-high",
+          "rank": 17
+        },
+        {
+          "model_name": "claude-opus-4-5-20251101-thinking-32k",
           "rank": 20
         }
       ],
       "dropped": [
         {
-          "model_name": "glm-5.2 (max)",
+          "model_name": "kimi-k3",
+          "last_rank": 18
+        },
+        {
+          "model_name": "glm-5.1",
+          "last_rank": 20
+        },
+        {
+          "model_name": "trinity-large-preview",
           "last_rank": 20
         }
       ]
@@ -1015,316 +1035,321 @@
     "coding": {
       "moved": [
         {
-          "model_name": "grok-4-0709",
+          "model_name": "claude-opus-4-8",
           "from_rank": 20,
-          "to_rank": 1
-        },
-        {
-          "model_name": "claude-opus-4-7",
-          "from_rank": 19,
-          "to_rank": 7
-        },
-        {
-          "model_name": "mimo-v2.5-pro",
-          "from_rank": 13,
-          "to_rank": 19
-        },
-        {
-          "model_name": "gpt-5.5",
-          "from_rank": 12,
-          "to_rank": 14
-        },
-        {
-          "model_name": "claude-fable-5",
-          "from_rank": 10,
           "to_rank": 12
         },
         {
-          "model_name": "gpt-5.1",
+          "model_name": "claude-sonnet-4-6",
+          "from_rank": 19,
+          "to_rank": 13
+        },
+        {
+          "model_name": "gpt-5.4-mini-high",
+          "from_rank": 15,
+          "to_rank": 19
+        },
+        {
+          "model_name": "gemini-3.6-flash",
+          "from_rank": 16,
+          "to_rank": 20
+        },
+        {
+          "model_name": "gpt-5.6-sol-xhigh",
+          "from_rank": 19,
+          "to_rank": 16
+        },
+        {
+          "model_name": "claude-fable-5",
           "from_rank": 12,
-          "to_rank": 10
-        },
-        {
-          "model_name": "qwen3.7-max-preview",
-          "from_rank": 8,
-          "to_rank": 10
-        },
-        {
-          "model_name": "claude-opus-4-6-thinking",
-          "from_rank": 6,
-          "to_rank": 7
-        },
-        {
-          "model_name": "claude-opus-4-5-20251101-thinking-32k",
-          "from_rank": 13,
           "to_rank": 14
         },
         {
           "model_name": "muse-spark-1.1",
-          "from_rank": 14,
-          "to_rank": 13
-        },
-        {
-          "model_name": "gpt-5.2-high",
-          "from_rank": 8,
-          "to_rank": 9
-        },
-        {
-          "model_name": "gpt-5.4-high",
           "from_rank": 13,
-          "to_rank": 14
+          "to_rank": 15
+        },
+        {
+          "model_name": "claude-opus-4-6-thinking",
+          "from_rank": 7,
+          "to_rank": 6
         },
         {
           "model_name": "claude-opus-4-7-thinking",
+          "from_rank": 12,
+          "to_rank": 11
+        },
+        {
+          "model_name": "gpt-5.1",
+          "from_rank": 10,
+          "to_rank": 11
+        },
+        {
+          "model_name": "claude-opus-4-7",
+          "from_rank": 7,
+          "to_rank": 8
+        },
+        {
+          "model_name": "claude-opus-4-6",
+          "from_rank": 8,
+          "to_rank": 7
+        },
+        {
+          "model_name": "qwen3.7-max-preview",
+          "from_rank": 10,
+          "to_rank": 11
+        },
+        {
+          "model_name": "gpt-5.4",
           "from_rank": 11,
           "to_rank": 12
         },
         {
-          "model_name": "gpt-5.4-mini-high",
-          "from_rank": 14,
-          "to_rank": 15
-        },
-        {
-          "model_name": "claude-sonnet-5-high",
-          "from_rank": 15,
-          "to_rank": 14
-        },
-        {
-          "model_name": "glm-5.1",
-          "from_rank": 15,
-          "to_rank": 16
-        },
-        {
-          "model_name": "gpt-5.2",
+          "model_name": "mimo-v2.5-pro",
           "from_rank": 19,
           "to_rank": 18
         },
         {
-          "model_name": "gpt-5.5-high",
+          "model_name": "claude-opus-4-1-20250805",
+          "from_rank": 16,
+          "to_rank": 15
+        },
+        {
+          "model_name": "gpt-5.4-high",
+          "from_rank": 14,
+          "to_rank": 13
+        },
+        {
+          "model_name": "claude-sonnet-5-high",
           "from_rank": 14,
           "to_rank": 15
         },
         {
-          "model_name": "claude-opus-4-1-20250805",
-          "from_rank": 15,
-          "to_rank": 16
+          "model_name": "claude-sonnet-4-5-20250929",
+          "from_rank": 17,
+          "to_rank": 18
         },
         {
-          "model_name": "claude-sonnet-4-6",
+          "model_name": "glm-5.1",
+          "from_rank": 16,
+          "to_rank": 17
+        },
+        {
+          "model_name": "gemini-3.5-flash-high",
           "from_rank": 18,
           "to_rank": 19
         },
         {
-          "model_name": "gpt-5.6-sol-xhigh",
+          "model_name": "gemini-3-pro",
           "from_rank": 20,
           "to_rank": 19
         },
         {
-          "model_name": "gemini-3-pro",
+          "model_name": "qwen3.5-max-preview",
+          "from_rank": 19,
+          "to_rank": 20
+        },
+        {
+          "model_name": "trinity-large-preview",
           "from_rank": 19,
           "to_rank": 20
         }
       ],
       "entered": [
         {
-          "model_name": "gemini-3.6-flash",
-          "rank": 16
+          "model_name": "claude-opus-5-high",
+          "rank": 3
         },
         {
-          "model_name": "gemini-3.5-flash-medium",
-          "rank": 20
+          "model_name": "kimi-k3-max",
+          "rank": 10
         },
         {
-          "model_name": "gpt-5.2-chat-latest-20260210",
+          "model_name": "grok-4.5",
+          "rank": 19
+        },
+        {
+          "model_name": "ernie-5.1",
           "rank": 20
         }
       ],
       "dropped": [
         {
-          "model_name": "ernie-5.1",
-          "last_rank": 18
+          "model_name": "kimi-k3",
+          "last_rank": 9
+        },
+        {
+          "model_name": "gemini-3.5-flash-medium",
+          "last_rank": 20
+        },
+        {
+          "model_name": "gpt-5.2-chat-latest-20260210",
+          "last_rank": 20
         }
       ]
     },
     "math": {
       "moved": [
         {
-          "model_name": "claude-fable-5",
-          "from_rank": 1,
-          "to_rank": 12
-        },
-        {
-          "model_name": "claude-opus-4-6-thinking",
-          "from_rank": 10,
+          "model_name": "claude-opus-4-6",
+          "from_rank": 9,
           "to_rank": 20
         },
         {
-          "model_name": "gpt-5.2-high",
-          "from_rank": 14,
+          "model_name": "claude-opus-4-8-thinking",
+          "from_rank": 19,
+          "to_rank": 12
+        },
+        {
+          "model_name": "glm-5",
+          "from_rank": 20,
+          "to_rank": 13
+        },
+        {
+          "model_name": "grok-4.5",
+          "from_rank": 8,
+          "to_rank": 13
+        },
+        {
+          "model_name": "ernie-5.1",
+          "from_rank": 20,
           "to_rank": 16
         },
         {
-          "model_name": "claude-opus-4-6",
-          "from_rank": 7,
-          "to_rank": 9
+          "model_name": "gemini-3.5-flash-medium",
+          "from_rank": 12,
+          "to_rank": 15
         },
         {
-          "model_name": "gpt-5.4-high",
-          "from_rank": 8,
-          "to_rank": 10
-        },
-        {
-          "model_name": "claude-opus-4-5-20251101-thinking-32k",
-          "from_rank": 15,
-          "to_rank": 17
-        },
-        {
-          "model_name": "mimo-v2.5-pro",
-          "from_rank": 17,
+          "model_name": "gemini-3-pro",
+          "from_rank": 16,
           "to_rank": 19
         },
         {
-          "model_name": "deepseek-v4-flash-thinking",
+          "model_name": "gpt-5.4-mini-high",
+          "from_rank": 15,
+          "to_rank": 18
+        },
+        {
+          "model_name": "gemini-3.6-flash",
+          "from_rank": 3,
+          "to_rank": 5
+        },
+        {
+          "model_name": "claude-fable-5",
+          "from_rank": 12,
+          "to_rank": 14
+        },
+        {
+          "model_name": "gpt-5.4",
+          "from_rank": 12,
+          "to_rank": 14
+        },
+        {
+          "model_name": "claude-opus-4-8",
           "from_rank": 20,
           "to_rank": 18
         },
         {
-          "model_name": "claude-opus-4-8-thinking",
-          "from_rank": 17,
-          "to_rank": 19
+          "model_name": "claude-opus-4-6-thinking",
+          "from_rank": 20,
+          "to_rank": 18
         },
         {
-          "model_name": "qwen3.5-max-preview",
-          "from_rank": 15,
-          "to_rank": 16
+          "model_name": "claude-opus-4-7-thinking",
+          "from_rank": 20,
+          "to_rank": 18
         },
         {
-          "model_name": "gpt-5.5-high",
-          "from_rank": 16,
-          "to_rank": 17
+          "model_name": "deepseek-v4-flash-thinking",
+          "from_rank": 18,
+          "to_rank": 20
         },
         {
-          "model_name": "gpt-5.2",
-          "from_rank": 8,
+          "model_name": "gemini-3.5-flash-high",
+          "from_rank": 2,
+          "to_rank": 3
+        },
+        {
+          "model_name": "gpt-5.4-high",
+          "from_rank": 10,
           "to_rank": 9
         },
         {
           "model_name": "gpt-5.1",
-          "from_rank": 7,
-          "to_rank": 8
-        },
-        {
-          "model_name": "qwen3.7-max-preview",
-          "from_rank": 6,
+          "from_rank": 8,
           "to_rank": 7
         },
         {
-          "model_name": "grok-4.5",
+          "model_name": "qwen3.7-max-preview",
           "from_rank": 7,
           "to_rank": 8
         },
         {
-          "model_name": "claude-opus-4-7",
-          "from_rank": 10,
-          "to_rank": 11
-        },
-        {
-          "model_name": "gemini-3.1-pro-preview",
-          "from_rank": 13,
-          "to_rank": 14
-        },
-        {
-          "model_name": "gpt-5.5",
-          "from_rank": 13,
-          "to_rank": 14
-        },
-        {
-          "model_name": "claude-opus-4-1-20250805",
-          "from_rank": 13,
-          "to_rank": 14
-        },
-        {
-          "model_name": "gpt-5.4-nano-high",
-          "from_rank": 14,
-          "to_rank": 15
-        },
-        {
-          "model_name": "gpt-5.4-mini-high",
-          "from_rank": 16,
-          "to_rank": 15
-        },
-        {
-          "model_name": "gemini-3-flash",
-          "from_rank": 20,
-          "to_rank": 19
+          "model_name": "gpt-5.2",
+          "from_rank": 9,
+          "to_rank": 8
         },
         {
           "model_name": "kimi-k2.6",
-          "from_rank": 19,
-          "to_rank": 20
-        },
-        {
-          "model_name": "glm-5.2 (max)",
-          "from_rank": 18,
-          "to_rank": 19
-        },
-        {
-          "model_name": "qwen3.7-plus",
           "from_rank": 20,
           "to_rank": 19
         },
         {
-          "model_name": "trinity-large-preview",
+          "model_name": "claude-opus-4-5-20251101-thinking-32k",
+          "from_rank": 17,
+          "to_rank": 16
+        },
+        {
+          "model_name": "glm-5.1",
+          "from_rank": 18,
+          "to_rank": 17
+        },
+        {
+          "model_name": "gpt-5.2-high",
+          "from_rank": 16,
+          "to_rank": 17
+        },
+        {
+          "model_name": "gpt-5.5-high",
+          "from_rank": 17,
+          "to_rank": 18
+        },
+        {
+          "model_name": "gpt-5.3-chat-latest",
           "from_rank": 18,
           "to_rank": 19
         },
         {
-          "model_name": "claude-opus-4-8",
+          "model_name": "mimo-v2.5-pro",
           "from_rank": 19,
           "to_rank": 20
         },
         {
-          "model_name": "ernie-5.1",
+          "model_name": "gemini-3-flash",
           "from_rank": 19,
           "to_rank": 20
         },
         {
-          "model_name": "glm-5",
-          "from_rank": 19,
-          "to_rank": 20
-        },
-        {
-          "model_name": "claude-opus-4-7-thinking",
+          "model_name": "qwen3.7-plus",
           "from_rank": 19,
           "to_rank": 20
         }
       ],
       "entered": [
         {
-          "model_name": "gemini-3.6-flash",
-          "rank": 3
+          "model_name": "claude-opus-5-high",
+          "rank": 1
         },
         {
-          "model_name": "inkling",
-          "rank": 18
+          "model_name": "glm-5.2-max",
+          "rank": 19
         }
       ],
       "dropped": [
         {
-          "model_name": "gemini-3-flash (thinking-minimal)",
+          "model_name": "glm-5.2 (max)",
           "last_rank": 19
-        },
-        {
-          "model_name": "kimi-k2.5-thinking",
-          "last_rank": 20
-        },
-        {
-          "model_name": "claude-opus-4-5-20251101",
-          "last_rank": 20
-        },
-        {
-          "model_name": "gpt-5.1-high",
-          "last_rank": 20
         }
       ]
     }
