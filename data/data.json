@@ -478,6 +478,11 @@
           "to_rank": 14
         },
         {
+          "model_name": "mimo-v2.5-pro",
+          "from_rank": 14,
+          "to_rank": 13
+        },
+        {
           "model_name": "qwen3.7-max-preview",
           "from_rank": 12,
           "to_rank": 11
@@ -486,11 +491,6 @@
           "model_name": "claude-opus-4-5-20251101",
           "from_rank": 13,
           "to_rank": 12
-        },
-        {
-          "model_name": "mimo-v2.5-pro",
-          "from_rank": 14,
-          "to_rank": 13
         },
         {
           "model_name": "glm-5.1",
