@@ -627,6 +627,11 @@
           "to_rank": 20
         },
         {
+          "model_name": "gpt-5.5",
+          "from_rank": 14,
+          "to_rank": 16
+        },
+        {
           "model_name": "claude-opus-4-6",
           "from_rank": 6,
           "to_rank": 8
@@ -635,11 +640,6 @@
           "model_name": "claude-opus-4-7",
           "from_rank": 12,
           "to_rank": 14
-        },
-        {
-          "model_name": "gpt-5.5",
-          "from_rank": 14,
-          "to_rank": 16
         },
         {
           "model_name": "claude-opus-4-6-thinking",
