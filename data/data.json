@@ -457,21 +457,6 @@
           "to_rank": 20
         },
         {
-          "model_name": "claude-opus-5-high",
-          "from_rank": 3,
-          "to_rank": 2
-        },
-        {
-          "model_name": "claude-opus-4-6-thinking",
-          "from_rank": 2,
-          "to_rank": 3
-        },
-        {
-          "model_name": "qwen3.8-max",
-          "from_rank": 5,
-          "to_rank": 4
-        },
-        {
           "model_name": "claude-opus-4-6",
           "from_rank": 4,
           "to_rank": 5
@@ -495,6 +480,21 @@
           "model_name": "muse-spark-1.1",
           "from_rank": 13,
           "to_rank": 14
+        },
+        {
+          "model_name": "claude-opus-5-high",
+          "from_rank": 3,
+          "to_rank": 2
+        },
+        {
+          "model_name": "claude-opus-4-6-thinking",
+          "from_rank": 2,
+          "to_rank": 3
+        },
+        {
+          "model_name": "qwen3.8-max",
+          "from_rank": 5,
+          "to_rank": 4
         }
       ],
       "entered": [
