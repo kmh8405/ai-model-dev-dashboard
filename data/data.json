@@ -524,6 +524,11 @@
     "math": {
       "moved": [
         {
+          "model_name": "gemini-3.5-flash-medium",
+          "from_rank": 15,
+          "to_rank": 17
+        },
+        {
           "model_name": "qwen3.8-max",
           "from_rank": 5,
           "to_rank": 3
@@ -532,11 +537,6 @@
           "model_name": "claude-opus-4-8-thinking",
           "from_rank": 17,
           "to_rank": 15
-        },
-        {
-          "model_name": "gemini-3.5-flash-medium",
-          "from_rank": 15,
-          "to_rank": 17
         },
         {
           "model_name": "claude-fable-5",
