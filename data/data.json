@@ -610,6 +610,16 @@
           "to_rank": 18
         },
         {
+          "model_name": "kimi-k3-max",
+          "from_rank": 13,
+          "to_rank": 12
+        },
+        {
+          "model_name": "gemini-3.1-pro-preview",
+          "from_rank": 14,
+          "to_rank": 15
+        },
+        {
           "model_name": "claude-fable-5",
           "from_rank": 3,
           "to_rank": 4
@@ -633,16 +643,6 @@
           "model_name": "qwen3.7-max-preview",
           "from_rank": 10,
           "to_rank": 11
-        },
-        {
-          "model_name": "kimi-k3-max",
-          "from_rank": 13,
-          "to_rank": 12
-        },
-        {
-          "model_name": "gemini-3.1-pro-preview",
-          "from_rank": 14,
-          "to_rank": 15
         }
       ],
       "entered": [
