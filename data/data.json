@@ -635,16 +635,6 @@
           "to_rank": 13
         },
         {
-          "model_name": "qwen3.8-max",
-          "from_rank": 10,
-          "to_rank": 11
-        },
-        {
-          "model_name": "qwen3.7-max-preview",
-          "from_rank": 13,
-          "to_rank": 14
-        },
-        {
           "model_name": "gpt-5.4-high",
           "from_rank": 14,
           "to_rank": 15
@@ -673,6 +663,16 @@
           "model_name": "gemini-3.5-flash-medium",
           "from_rank": 19,
           "to_rank": 20
+        },
+        {
+          "model_name": "qwen3.8-max",
+          "from_rank": 10,
+          "to_rank": 11
+        },
+        {
+          "model_name": "qwen3.7-max-preview",
+          "from_rank": 13,
+          "to_rank": 14
         }
       ],
       "entered": [
