@@ -503,11 +503,6 @@
           "to_rank": 6
         },
         {
-          "model_name": "claude-sonnet-4-6",
-          "from_rank": 13,
-          "to_rank": 12
-        },
-        {
           "model_name": "gemini-3.7-flash-high",
           "from_rank": 12,
           "to_rank": 13
@@ -541,6 +536,11 @@
           "model_name": "qwen3.7-max-preview",
           "from_rank": 19,
           "to_rank": 20
+        },
+        {
+          "model_name": "claude-sonnet-4-6",
+          "from_rank": 13,
+          "to_rank": 12
         },
         {
           "model_name": "claude-fable-5",
