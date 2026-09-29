@@ -564,21 +564,6 @@
           "to_rank": 18
         },
         {
-          "model_name": "claude-opus-4-6-high",
-          "from_rank": 1,
-          "to_rank": 4
-        },
-        {
-          "model_name": "claude-opus-5-high",
-          "from_rank": 3,
-          "to_rank": 6
-        },
-        {
-          "model_name": "claude-fable-5.1-max",
-          "from_rank": 10,
-          "to_rank": 7
-        },
-        {
           "model_name": "muse-spark-1.3-max",
           "from_rank": 7,
           "to_rank": 10
@@ -594,14 +579,29 @@
           "to_rank": 19
         },
         {
-          "model_name": "claude-opus-4-7-high",
-          "from_rank": 6,
-          "to_rank": 8
+          "model_name": "claude-opus-4-6-high",
+          "from_rank": 1,
+          "to_rank": 4
+        },
+        {
+          "model_name": "claude-opus-5-high",
+          "from_rank": 3,
+          "to_rank": 6
+        },
+        {
+          "model_name": "claude-fable-5.1-max",
+          "from_rank": 10,
+          "to_rank": 7
         },
         {
           "model_name": "qwen3.8-max",
           "from_rank": 18,
           "to_rank": 20
+        },
+        {
+          "model_name": "claude-opus-4-7-high",
+          "from_rank": 6,
+          "to_rank": 8
         },
         {
           "model_name": "claude-opus-4-6",
