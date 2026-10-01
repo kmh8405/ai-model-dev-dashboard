@@ -447,11 +447,6 @@
           "to_rank": 17
         },
         {
-          "model_name": "claude-opus-5-high",
-          "from_rank": 3,
-          "to_rank": 5
-        },
-        {
           "model_name": "muse-spark-1.2 (xHigh)",
           "from_rank": 11,
           "to_rank": 13
@@ -470,6 +465,21 @@
           "model_name": "gemini-3.6-flash-high",
           "from_rank": 18,
           "to_rank": 20
+        },
+        {
+          "model_name": "claude-opus-5-high",
+          "from_rank": 3,
+          "to_rank": 5
+        },
+        {
+          "model_name": "muse-spark-1.3-max",
+          "from_rank": 10,
+          "to_rank": 11
+        },
+        {
+          "model_name": "gemini-3-pro",
+          "from_rank": 17,
+          "to_rank": 18
         },
         {
           "model_name": "claude-fable-5.1-max",
@@ -495,16 +505,6 @@
           "model_name": "claude-opus-4-7-high",
           "from_rank": 9,
           "to_rank": 10
-        },
-        {
-          "model_name": "muse-spark-1.3-max",
-          "from_rank": 10,
-          "to_rank": 11
-        },
-        {
-          "model_name": "gemini-3-pro",
-          "from_rank": 17,
-          "to_rank": 18
         }
       ],
       "entered": [
@@ -564,21 +564,6 @@
           "to_rank": 18
         },
         {
-          "model_name": "muse-spark-1.3-max",
-          "from_rank": 7,
-          "to_rank": 10
-        },
-        {
-          "model_name": "kimi-k3-max",
-          "from_rank": 12,
-          "to_rank": 15
-        },
-        {
-          "model_name": "mimo-v2.5-pro",
-          "from_rank": 16,
-          "to_rank": 19
-        },
-        {
           "model_name": "claude-opus-4-6-high",
           "from_rank": 1,
           "to_rank": 4
@@ -594,14 +579,29 @@
           "to_rank": 7
         },
         {
-          "model_name": "qwen3.8-max",
-          "from_rank": 18,
-          "to_rank": 20
+          "model_name": "muse-spark-1.3-max",
+          "from_rank": 7,
+          "to_rank": 10
+        },
+        {
+          "model_name": "kimi-k3-max",
+          "from_rank": 12,
+          "to_rank": 15
+        },
+        {
+          "model_name": "mimo-v2.5-pro",
+          "from_rank": 16,
+          "to_rank": 19
         },
         {
           "model_name": "claude-opus-4-7-high",
           "from_rank": 6,
           "to_rank": 8
+        },
+        {
+          "model_name": "qwen3.8-max",
+          "from_rank": 18,
+          "to_rank": 20
         },
         {
           "model_name": "claude-opus-4-6",
