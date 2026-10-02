@@ -624,16 +624,6 @@
           "to_rank": 16
         },
         {
-          "model_name": "muse-spark-1.3-max",
-          "from_rank": 15,
-          "to_rank": 12
-        },
-        {
-          "model_name": "gemini-3.5-flash-high",
-          "from_rank": 10,
-          "to_rank": 13
-        },
-        {
           "model_name": "claude-opus-4-7-high",
           "from_rank": 12,
           "to_rank": 15
@@ -642,6 +632,16 @@
           "model_name": "mimo-v2.6-pro",
           "from_rank": 14,
           "to_rank": 17
+        },
+        {
+          "model_name": "muse-spark-1.3-max",
+          "from_rank": 15,
+          "to_rank": 12
+        },
+        {
+          "model_name": "gemini-3.5-flash-high",
+          "from_rank": 10,
+          "to_rank": 13
         },
         {
           "model_name": "claude-fable-5-high",
@@ -679,6 +679,11 @@
           "to_rank": 5
         },
         {
+          "model_name": "kimi-k3-max",
+          "from_rank": 17,
+          "to_rank": 18
+        },
+        {
           "model_name": "claude-opus-5-high",
           "from_rank": 1,
           "to_rank": 2
@@ -687,11 +692,6 @@
           "model_name": "qwen3.8-max",
           "from_rank": 13,
           "to_rank": 14
-        },
-        {
-          "model_name": "kimi-k3-max",
-          "from_rank": 17,
-          "to_rank": 18
         }
       ],
       "entered": [
