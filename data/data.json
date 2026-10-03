@@ -549,26 +549,6 @@
           "to_rank": 14
         },
         {
-          "model_name": "claude-opus-5-max",
-          "from_rank": 3,
-          "to_rank": 2
-        },
-        {
-          "model_name": "claude-opus-5-high",
-          "from_rank": 2,
-          "to_rank": 3
-        },
-        {
-          "model_name": "claude-fable-5-high",
-          "from_rank": 7,
-          "to_rank": 6
-        },
-        {
-          "model_name": "claude-opus-4-6-high",
-          "from_rank": 6,
-          "to_rank": 7
-        },
-        {
           "model_name": "gemini-3.5-flash-high",
           "from_rank": 13,
           "to_rank": 12
@@ -592,6 +572,26 @@
           "model_name": "claude-opus-4-7",
           "from_rank": 19,
           "to_rank": 20
+        },
+        {
+          "model_name": "claude-opus-5-max",
+          "from_rank": 3,
+          "to_rank": 2
+        },
+        {
+          "model_name": "claude-opus-5-high",
+          "from_rank": 2,
+          "to_rank": 3
+        },
+        {
+          "model_name": "claude-fable-5-high",
+          "from_rank": 7,
+          "to_rank": 6
+        },
+        {
+          "model_name": "claude-opus-4-6-high",
+          "from_rank": 6,
+          "to_rank": 7
         }
       ],
       "entered": [
