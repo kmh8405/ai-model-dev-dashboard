@@ -549,6 +549,11 @@
           "to_rank": 14
         },
         {
+          "model_name": "claude-opus-4-7",
+          "from_rank": 19,
+          "to_rank": 20
+        },
+        {
           "model_name": "claude-fable-5-high",
           "from_rank": 7,
           "to_rank": 6
@@ -577,11 +582,6 @@
           "model_name": "claude-opus-4-7-high",
           "from_rank": 15,
           "to_rank": 16
-        },
-        {
-          "model_name": "claude-opus-4-7",
-          "from_rank": 19,
-          "to_rank": 20
         },
         {
           "model_name": "claude-opus-5-max",
