@@ -518,6 +518,11 @@
           "to_rank": 4
         },
         {
+          "model_name": "mimo-v2.6-flash",
+          "from_rank": 18,
+          "to_rank": 19
+        },
+        {
           "model_name": "mimo-v2.6-pro",
           "from_rank": 4,
           "to_rank": 5
@@ -551,11 +556,6 @@
           "model_name": "deepseek-v4.1-flash-max",
           "from_rank": 17,
           "to_rank": 18
-        },
-        {
-          "model_name": "mimo-v2.6-flash",
-          "from_rank": 18,
-          "to_rank": 19
         }
       ],
       "entered": [
