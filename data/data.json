@@ -731,11 +731,6 @@
           "to_rank": 15
         },
         {
-          "model_name": "glm-5.3-flash",
-          "from_rank": 13,
-          "to_rank": 12
-        },
-        {
           "model_name": "gemini-3.6-flash-high",
           "from_rank": 12,
           "to_rank": 11
@@ -749,6 +744,11 @@
           "model_name": "qwen3.8-max",
           "from_rank": 15,
           "to_rank": 14
+        },
+        {
+          "model_name": "glm-5.3-flash",
+          "from_rank": 13,
+          "to_rank": 12
         }
       ],
       "entered": [
