@@ -442,14 +442,14 @@
           "to_rank": 12
         },
         {
-          "model_name": "Claude Opus 4.6 (High)",
-          "from_rank": 7,
-          "to_rank": 6
-        },
-        {
           "model_name": "Muse Wonder (Max)",
           "from_rank": 6,
           "to_rank": 7
+        },
+        {
+          "model_name": "Claude Opus 4.6 (High)",
+          "from_rank": 7,
+          "to_rank": 6
         }
       ],
       "entered": [],
@@ -544,26 +544,6 @@
           "to_rank": 3
         },
         {
-          "model_name": "Gemini 3.8 Flash (High)",
-          "from_rank": 3,
-          "to_rank": 4
-        },
-        {
-          "model_name": "Claude Opus 5 (High)",
-          "from_rank": 4,
-          "to_rank": 5
-        },
-        {
-          "model_name": "Claude Opus 4.6",
-          "from_rank": 10,
-          "to_rank": 9
-        },
-        {
-          "model_name": "Gemini 3.7 Flash (High)",
-          "from_rank": 9,
-          "to_rank": 10
-        },
-        {
           "model_name": "GLM-5.3-Flash",
           "from_rank": 13,
           "to_rank": 14
@@ -582,6 +562,26 @@
           "model_name": "Claude Opus 4.7 (High)",
           "from_rank": 16,
           "to_rank": 17
+        },
+        {
+          "model_name": "Gemini 3.8 Flash (High)",
+          "from_rank": 3,
+          "to_rank": 4
+        },
+        {
+          "model_name": "Claude Opus 5 (High)",
+          "from_rank": 4,
+          "to_rank": 5
+        },
+        {
+          "model_name": "Claude Opus 4.6",
+          "from_rank": 10,
+          "to_rank": 9
+        },
+        {
+          "model_name": "Gemini 3.7 Flash (High)",
+          "from_rank": 9,
+          "to_rank": 10
         }
       ],
       "entered": [],
