@@ -544,26 +544,6 @@
           "to_rank": 3
         },
         {
-          "model_name": "GLM-5.3-Flash",
-          "from_rank": 13,
-          "to_rank": 14
-        },
-        {
-          "model_name": "Qwen3.8-Max",
-          "from_rank": 14,
-          "to_rank": 15
-        },
-        {
-          "model_name": "MiMo-V2.6-Pro",
-          "from_rank": 15,
-          "to_rank": 16
-        },
-        {
-          "model_name": "Claude Opus 4.7 (High)",
-          "from_rank": 16,
-          "to_rank": 17
-        },
-        {
           "model_name": "Gemini 3.8 Flash (High)",
           "from_rank": 3,
           "to_rank": 4
@@ -582,6 +562,26 @@
           "model_name": "Gemini 3.7 Flash (High)",
           "from_rank": 9,
           "to_rank": 10
+        },
+        {
+          "model_name": "GLM-5.3-Flash",
+          "from_rank": 13,
+          "to_rank": 14
+        },
+        {
+          "model_name": "Qwen3.8-Max",
+          "from_rank": 14,
+          "to_rank": 15
+        },
+        {
+          "model_name": "MiMo-V2.6-Pro",
+          "from_rank": 15,
+          "to_rank": 16
+        },
+        {
+          "model_name": "Claude Opus 4.7 (High)",
+          "from_rank": 16,
+          "to_rank": 17
         }
       ],
       "entered": [],
