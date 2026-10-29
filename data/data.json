@@ -559,11 +559,6 @@
           "to_rank": 10
         },
         {
-          "model_name": "Gemini 3.8 Flash (High)",
-          "from_rank": 3,
-          "to_rank": 4
-        },
-        {
           "model_name": "GLM-5.3-Flash",
           "from_rank": 13,
           "to_rank": 14
@@ -582,6 +577,11 @@
           "model_name": "Claude Opus 4.7 (High)",
           "from_rank": 16,
           "to_rank": 17
+        },
+        {
+          "model_name": "Gemini 3.8 Flash (High)",
+          "from_rank": 3,
+          "to_rank": 4
         }
       ],
       "entered": [],
