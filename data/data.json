@@ -554,11 +554,6 @@
           "to_rank": 16
         },
         {
-          "model_name": "Claude Opus 5 (Max)",
-          "from_rank": 5,
-          "to_rank": 2
-        },
-        {
           "model_name": "Qwen3.8-Max",
           "from_rank": 13,
           "to_rank": 10
@@ -569,6 +564,11 @@
           "to_rank": 20
         },
         {
+          "model_name": "Claude Opus 5 (Max)",
+          "from_rank": 5,
+          "to_rank": 2
+        },
+        {
           "model_name": "Claude Opus 5.5 (High)",
           "from_rank": 8,
           "to_rank": 6
@@ -577,11 +577,6 @@
           "model_name": "GLM-5.3-Flash",
           "from_rank": 16,
           "to_rank": 14
-        },
-        {
-          "model_name": "Claude Opus 5 (High)",
-          "from_rank": 4,
-          "to_rank": 3
         },
         {
           "model_name": "Claude Fable 5.1 (Max)",
@@ -612,6 +607,11 @@
           "model_name": "Muse Spark 1.3 (Max)",
           "from_rank": 18,
           "to_rank": 17
+        },
+        {
+          "model_name": "Claude Opus 5 (High)",
+          "from_rank": 4,
+          "to_rank": 3
         }
       ],
       "entered": [
