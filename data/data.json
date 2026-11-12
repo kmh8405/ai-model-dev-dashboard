@@ -494,16 +494,6 @@
     "math": {
       "moved": [
         {
-          "model_name": "Gemini 3.5 Flash (High)",
-          "from_rank": 13,
-          "to_rank": 12
-        },
-        {
-          "model_name": "Gemini 3.6 Flash (High)",
-          "from_rank": 12,
-          "to_rank": 13
-        },
-        {
           "model_name": "Claude Fable 5.1 (Max)",
           "from_rank": 4,
           "to_rank": 3
@@ -512,6 +502,16 @@
           "model_name": "Claude Opus 5 (Max)",
           "from_rank": 3,
           "to_rank": 4
+        },
+        {
+          "model_name": "Gemini 3.5 Flash (High)",
+          "from_rank": 13,
+          "to_rank": 12
+        },
+        {
+          "model_name": "Gemini 3.6 Flash (High)",
+          "from_rank": 12,
+          "to_rank": 13
         }
       ],
       "entered": [],
