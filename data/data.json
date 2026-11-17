@@ -4,141 +4,141 @@
       "model_name": "Gemini 4 Carbon (High)",
       "organization": "google",
       "rank": 1,
-      "rating": 1538.2768191996465,
-      "vote_count": 4282
+      "rating": 1538.3770199723876,
+      "vote_count": 4273
     },
     {
       "model_name": "Gemini 4 Argon (High)",
       "organization": "google",
       "rank": 2,
-      "rating": 1530.160034009476,
-      "vote_count": 19787
+      "rating": 1529.458427301669,
+      "vote_count": 20779
     },
     {
       "model_name": "Claude Opus 5.5 (High)",
       "organization": "anthropic",
       "rank": 3,
-      "rating": 1513.0021399366474,
-      "vote_count": 15249
+      "rating": 1513.6568986729217,
+      "vote_count": 15793
     },
     {
       "model_name": "Claude Fable 5.1 (Max)",
       "organization": "anthropic",
       "rank": 4,
-      "rating": 1512.3784035606031,
-      "vote_count": 20087
+      "rating": 1512.0447118627767,
+      "vote_count": 20511
     },
     {
       "model_name": "Claude Opus 5 (Max)",
       "organization": "anthropic",
       "rank": 5,
-      "rating": 1506.3172184201153,
-      "vote_count": 35710
+      "rating": 1506.503903658589,
+      "vote_count": 35670
     },
     {
       "model_name": "Muse Wonder (Max)",
       "organization": "meta",
       "rank": 6,
-      "rating": 1503.0484713809174,
-      "vote_count": 12032
+      "rating": 1502.9696785411802,
+      "vote_count": 12696
     },
     {
       "model_name": "Claude Opus 5 (High)",
       "organization": "anthropic",
       "rank": 7,
-      "rating": 1502.2616064241324,
-      "vote_count": 73697
+      "rating": 1502.2099919193724,
+      "vote_count": 73632
+    },
+    {
+      "model_name": "Gemini 4 Hydrogen (High)",
+      "organization": "google",
+      "rank": 8,
+      "rating": 1502.1225848020104,
+      "vote_count": 4741
     },
     {
       "model_name": "Claude Opus 4.6 (High)",
       "organization": "anthropic",
-      "rank": 8,
-      "rating": 1501.6578583092228,
-      "vote_count": 84424
+      "rank": 9,
+      "rating": 1501.475176103134,
+      "vote_count": 84375
     },
     {
       "model_name": "Gemini 3.8 Flash (High)",
       "organization": "google",
-      "rank": 9,
-      "rating": 1500.4121268761392,
-      "vote_count": 61143
+      "rank": 10,
+      "rating": 1499.579748060844,
+      "vote_count": 62675
     },
     {
       "model_name": "Claude Opus 4.6",
       "organization": "anthropic",
-      "rank": 10,
-      "rating": 1496.747935344304,
-      "vote_count": 89228
-    },
-    {
-      "model_name": "MiMo-V2.6-Pro",
-      "organization": "xiaomi",
       "rank": 11,
-      "rating": 1491.7070850560972,
-      "vote_count": 4066
+      "rating": 1496.7404658644173,
+      "vote_count": 89177
     },
     {
       "model_name": "Claude Fable 5 (High)",
       "organization": "anthropic",
       "rank": 12,
-      "rating": 1491.5868575384075,
-      "vote_count": 45524
+      "rating": 1491.659815731708,
+      "vote_count": 45469
     },
     {
       "model_name": "Muse Spark 1.3 (Max)",
       "organization": "meta",
       "rank": 13,
-      "rating": 1491.468287476569,
-      "vote_count": 26111
+      "rating": 1491.638325356102,
+      "vote_count": 26806
+    },
+    {
+      "model_name": "MiMo-V2.6-Pro",
+      "organization": "xiaomi",
+      "rank": 14,
+      "rating": 1491.597449810005,
+      "vote_count": 4064
     },
     {
       "model_name": "Claude Opus 4.7 (High)",
       "organization": "anthropic",
-      "rank": 14,
-      "rating": 1489.708157620371,
-      "vote_count": 64308
+      "rank": 15,
+      "rating": 1489.7726215811858,
+      "vote_count": 64260
     },
     {
       "model_name": "Gemini 3.7 Flash (High)",
       "organization": "google",
-      "rank": 15,
-      "rating": 1488.8172106766838,
-      "vote_count": 33300
+      "rank": 16,
+      "rating": 1488.7142092963645,
+      "vote_count": 33251
     },
     {
       "model_name": "Qwen3.8-Max",
       "organization": "alibaba",
-      "rank": 16,
-      "rating": 1485.2093041935336,
-      "vote_count": 36324
+      "rank": 17,
+      "rating": 1485.2771568679314,
+      "vote_count": 36936
     },
     {
       "model_name": "Muse Spark 1.2 (xHigh)",
       "organization": "meta",
-      "rank": 17,
-      "rating": 1484.0008497377926,
-      "vote_count": 15004
+      "rank": 18,
+      "rating": 1483.436687240015,
+      "vote_count": 15563
     },
     {
       "model_name": "Claude Opus 4.7",
       "organization": "anthropic",
-      "rank": 18,
-      "rating": 1483.1994040999593,
-      "vote_count": 65369
+      "rank": 19,
+      "rating": 1483.2318130937601,
+      "vote_count": 65309
     },
     {
       "model_name": "Gemini 3.5 Flash (High)",
       "organization": "google",
-      "rank": 19,
-      "rating": 1482.9362147697643,
-      "vote_count": 47642
-    },
-    {
-      "model_name": "Gemini 3.1 Pro Preview",
-      "organization": "google",
       "rank": 20,
-      "rating": 1479.9928559278965,
-      "vote_count": 132296
+      "rating": 1482.9240258935147,
+      "vote_count": 47588
     }
   ],
   "coding": [
@@ -146,141 +146,141 @@
       "model_name": "Gemini 4 Carbon (High)",
       "organization": "google",
       "rank": 1,
-      "rating": 1563.4077447085933,
-      "vote_count": 1072
+      "rating": 1564.3605267450653,
+      "vote_count": 1069
     },
     {
       "model_name": "Claude Opus 5.5 (High)",
       "organization": "anthropic",
       "rank": 2,
-      "rating": 1542.2113538765977,
-      "vote_count": 3339
+      "rating": 1543.433913201904,
+      "vote_count": 3460
     },
     {
       "model_name": "Gemini 4 Argon (High)",
       "organization": "google",
       "rank": 3,
-      "rating": 1540.0321818343057,
-      "vote_count": 4614
+      "rating": 1540.214655320411,
+      "vote_count": 4833
     },
     {
       "model_name": "Claude Opus 4.6",
       "organization": "anthropic",
       "rank": 4,
-      "rating": 1533.873961425388,
-      "vote_count": 24562
+      "rating": 1533.9598317954647,
+      "vote_count": 24530
     },
     {
       "model_name": "MiMo-V2.6-Pro",
       "organization": "xiaomi",
       "rank": 5,
-      "rating": 1533.0864923981503,
+      "rating": 1533.5917800275547,
       "vote_count": 1091
     },
     {
       "model_name": "Claude Opus 5 (Max)",
       "organization": "anthropic",
       "rank": 6,
-      "rating": 1531.8941247808177,
-      "vote_count": 8837
+      "rating": 1532.0030270898455,
+      "vote_count": 8842
     },
     {
       "model_name": "Claude Opus 5 (High)",
       "organization": "anthropic",
       "rank": 7,
-      "rating": 1531.07832842119,
-      "vote_count": 18776
+      "rating": 1530.8359100172897,
+      "vote_count": 18770
     },
     {
       "model_name": "Claude Opus 4.6 (High)",
       "organization": "anthropic",
       "rank": 8,
-      "rating": 1531.005642186357,
-      "vote_count": 21744
+      "rating": 1530.5943937333673,
+      "vote_count": 21711
     },
     {
       "model_name": "Claude Fable 5.1 (Max)",
       "organization": "anthropic",
       "rank": 9,
-      "rating": 1527.0414871517046,
-      "vote_count": 3921
+      "rating": 1527.3581732247849,
+      "vote_count": 4008
     },
     {
       "model_name": "Claude Opus 4.7 (High)",
       "organization": "anthropic",
       "rank": 10,
-      "rating": 1518.8246750333394,
-      "vote_count": 18358
+      "rating": 1518.9324180328495,
+      "vote_count": 18334
     },
     {
       "model_name": "Claude Fable 5 (High)",
       "organization": "anthropic",
       "rank": 11,
-      "rating": 1518.6099647180215,
-      "vote_count": 11674
+      "rating": 1518.8168233616211,
+      "vote_count": 11651
+    },
+    {
+      "model_name": "Gemini 4 Hydrogen (High)",
+      "organization": "google",
+      "rank": 12,
+      "rating": 1515.8583722695457,
+      "vote_count": 1044
     },
     {
       "model_name": "Muse Wonder (Max)",
       "organization": "meta",
-      "rank": 12,
-      "rating": 1517.4323583092844,
-      "vote_count": 2898
+      "rank": 13,
+      "rating": 1515.6098887218054,
+      "vote_count": 3042
     },
     {
       "model_name": "Claude Opus 4.7",
       "organization": "anthropic",
-      "rank": 13,
-      "rating": 1515.3034554555752,
-      "vote_count": 18563
+      "rank": 14,
+      "rating": 1515.4116387793783,
+      "vote_count": 18521
     },
     {
       "model_name": "Gemini 3.8 Flash (High)",
       "organization": "google",
-      "rank": 14,
-      "rating": 1510.6450084643507,
-      "vote_count": 15497
+      "rank": 15,
+      "rating": 1510.0993662714704,
+      "vote_count": 15812
     },
     {
       "model_name": "GLM-5.3-Flash",
       "organization": "zai",
-      "rank": 15,
-      "rating": 1509.6982382600972,
-      "vote_count": 12702
+      "rank": 16,
+      "rating": 1509.4180611502602,
+      "vote_count": 12885
     },
     {
       "model_name": "Muse Spark 1.3 (Max)",
       "organization": "meta",
-      "rank": 16,
-      "rating": 1507.8592051139485,
-      "vote_count": 6693
-    },
-    {
-      "model_name": "Muse Spark 1.2 (xHigh)",
-      "organization": "meta",
       "rank": 17,
-      "rating": 1507.2877741355894,
-      "vote_count": 3788
+      "rating": 1508.6753577560858,
+      "vote_count": 6830
     },
     {
       "model_name": "Kimi K3 (Max)",
       "organization": "moonshot",
       "rank": 18,
-      "rating": 1505.48591129479,
-      "vote_count": 10151
+      "rating": 1506.3341827967306,
+      "vote_count": 10247
     },
     {
-      "model_name": "Claude Sonnet 4.6",
-      "organization": "anthropic",
+      "model_name": "Muse Spark 1.2 (xHigh)",
+      "organization": "meta",
       "rank": 19,
-      "rating": 1503.5659359326949,
-      "vote_count": 19463
+      "rating": 1505.90553054787,
+      "vote_count": 3912
     },
     {
       "model_name": "DeepSeek-V4.1-Flash-20260910 (Max)",
       "organization": "deepseek",
       "rank": 20,
-      "rating": 1503.437169450282,
-      "vote_count": 3717
+      "rating": 1503.7880397046765,
+      "vote_count": 3709
     }
   ],
   "math": [
@@ -288,205 +288,255 @@
       "model_name": "Gemini 4 Argon (High)",
       "organization": "google",
       "rank": 1,
-      "rating": 1538.3356954020521,
-      "vote_count": 1046
+      "rating": 1543.8290658297642,
+      "vote_count": 1102
     },
     {
       "model_name": "Claude Opus 5 (High)",
       "organization": "anthropic",
       "rank": 2,
-      "rating": 1532.2321374694257,
-      "vote_count": 3494
-    },
-    {
-      "model_name": "Claude Fable 5.1 (Max)",
-      "organization": "anthropic",
-      "rank": 3,
-      "rating": 1530.842499729275,
-      "vote_count": 975
+      "rating": 1532.1593945468069,
+      "vote_count": 3490
     },
     {
       "model_name": "Claude Opus 5 (Max)",
       "organization": "anthropic",
+      "rank": 3,
+      "rating": 1530.711978986542,
+      "vote_count": 1696
+    },
+    {
+      "model_name": "Claude Fable 5.1 (Max)",
+      "organization": "anthropic",
       "rank": 4,
-      "rating": 1530.7657257853514,
-      "vote_count": 1702
+      "rating": 1529.6213822392774,
+      "vote_count": 1003
     },
     {
       "model_name": "Gemini 3.8 Flash (High)",
       "organization": "google",
       "rank": 5,
-      "rating": 1525.5561553836503,
-      "vote_count": 3076
+      "rating": 1525.2570512501688,
+      "vote_count": 3173
     },
     {
       "model_name": "Claude Opus 5.5 (High)",
       "organization": "anthropic",
       "rank": 6,
-      "rating": 1523.9559805458593,
-      "vote_count": 739
+      "rating": 1520.0025441229207,
+      "vote_count": 768
     },
     {
       "model_name": "Claude Opus 4.6 (High)",
       "organization": "anthropic",
       "rank": 7,
-      "rating": 1517.195831412082,
-      "vote_count": 4316
+      "rating": 1517.046440887505,
+      "vote_count": 4308
     },
     {
       "model_name": "Claude Fable 5 (High)",
       "organization": "anthropic",
       "rank": 8,
-      "rating": 1516.4552607595626,
+      "rating": 1516.3904818811225,
       "vote_count": 2240
     },
     {
       "model_name": "Claude Opus 4.6",
       "organization": "anthropic",
       "rank": 9,
-      "rating": 1509.297317121605,
-      "vote_count": 4793
+      "rating": 1509.3492052873548,
+      "vote_count": 4789
     },
     {
       "model_name": "Qwen3.8-Max",
       "organization": "alibaba",
       "rank": 10,
-      "rating": 1508.0528119923208,
-      "vote_count": 1804
+      "rating": 1509.1318028725143,
+      "vote_count": 1838
+    },
+    {
+      "model_name": "Gemini 4 Hydrogen (High)",
+      "organization": "google",
+      "rank": 11,
+      "rating": 1506.744475450577,
+      "vote_count": 229
     },
     {
       "model_name": "Gemini 3.7 Flash (High)",
       "organization": "google",
-      "rank": 11,
-      "rating": 1506.7558758032703,
-      "vote_count": 1682
-    },
-    {
-      "model_name": "Gemini 3.5 Flash (High)",
-      "organization": "google",
       "rank": 12,
-      "rating": 1504.8601720798197,
-      "vote_count": 2320
+      "rating": 1506.4876204566642,
+      "vote_count": 1684
     },
     {
       "model_name": "Gemini 3.6 Flash (High)",
       "organization": "google",
       "rank": 13,
-      "rating": 1504.5547786743825,
-      "vote_count": 1707
+      "rating": 1504.5271711315677,
+      "vote_count": 1706
+    },
+    {
+      "model_name": "Gemini 3.5 Flash (High)",
+      "organization": "google",
+      "rank": 14,
+      "rating": 1504.4183690228992,
+      "vote_count": 2318
     },
     {
       "model_name": "GLM-5.3-Flash",
       "organization": "zai",
-      "rank": 14,
-      "rating": 1502.5573057479164,
-      "vote_count": 2490
+      "rank": 15,
+      "rating": 1503.197244299343,
+      "vote_count": 2537
     },
     {
       "model_name": "GLM-5.3 (Max)",
       "organization": "zai",
-      "rank": 15,
-      "rating": 1499.020821901837,
-      "vote_count": 1310
+      "rank": 16,
+      "rating": 1499.580189264363,
+      "vote_count": 1338
     },
     {
       "model_name": "Claude Opus 4.7 (High)",
       "organization": "anthropic",
-      "rank": 16,
-      "rating": 1498.5084823718305,
-      "vote_count": 3239
+      "rank": 17,
+      "rating": 1498.4365988324244,
+      "vote_count": 3238
     },
     {
       "model_name": "Muse Spark 1.3 (Max)",
       "organization": "meta",
-      "rank": 17,
-      "rating": 1497.6015768007292,
-      "vote_count": 1264
+      "rank": 18,
+      "rating": 1498.0274875386974,
+      "vote_count": 1305
     },
     {
       "model_name": "Kimi K3 (Max)",
       "organization": "moonshot",
-      "rank": 18,
-      "rating": 1496.8493634634426,
-      "vote_count": 1844
+      "rank": 19,
+      "rating": 1495.782561753964,
+      "vote_count": 1877
     },
     {
       "model_name": "MiMo-V2.6-Pro",
       "organization": "xiaomi",
-      "rank": 19,
-      "rating": 1493.7782807249982,
-      "vote_count": 213
-    },
-    {
-      "model_name": "Claude Opus 4.7",
-      "organization": "anthropic",
       "rank": 20,
-      "rating": 1488.4051270526525,
-      "vote_count": 3347
+      "rating": 1495.4672972682179,
+      "vote_count": 212
     }
   ],
   "changelog": {
-    "previous_snapshot_date": "2026-11-08",
-    "current_snapshot_date": "2026-11-09",
-    "headline": "Muse Wonder (Max)이 Coding 부문 10위→12위로 내려갔습니다",
+    "previous_snapshot_date": "2026-11-09",
+    "current_snapshot_date": "2026-11-11",
+    "headline": "MiMo-V2.6-Pro이 Overall 부문 11위→14위로 내려갔습니다",
     "overall": {
       "moved": [
         {
-          "model_name": "Claude Opus 5.5 (High)",
-          "from_rank": 4,
-          "to_rank": 3
-        },
-        {
-          "model_name": "Claude Fable 5.1 (Max)",
-          "from_rank": 3,
-          "to_rank": 4
-        }
-      ],
-      "entered": [],
-      "dropped": []
-    },
-    "coding": {
-      "moved": [
-        {
-          "model_name": "Muse Wonder (Max)",
-          "from_rank": 10,
-          "to_rank": 12
-        },
-        {
-          "model_name": "Claude Opus 4.7 (High)",
+          "model_name": "MiMo-V2.6-Pro",
           "from_rank": 11,
-          "to_rank": 10
-        },
-        {
-          "model_name": "Claude Fable 5 (High)",
-          "from_rank": 12,
-          "to_rank": 11
-        },
-        {
-          "model_name": "Gemini 3.8 Flash (High)",
-          "from_rank": 15,
           "to_rank": 14
         },
         {
-          "model_name": "GLM-5.3-Flash",
+          "model_name": "Claude Opus 4.6 (High)",
+          "from_rank": 8,
+          "to_rank": 9
+        },
+        {
+          "model_name": "Gemini 3.8 Flash (High)",
+          "from_rank": 9,
+          "to_rank": 10
+        },
+        {
+          "model_name": "Claude Opus 4.6",
+          "from_rank": 10,
+          "to_rank": 11
+        },
+        {
+          "model_name": "Claude Opus 4.7 (High)",
           "from_rank": 14,
           "to_rank": 15
         },
         {
-          "model_name": "Claude Sonnet 4.6",
-          "from_rank": 20,
+          "model_name": "Gemini 3.7 Flash (High)",
+          "from_rank": 15,
+          "to_rank": 16
+        },
+        {
+          "model_name": "Qwen3.8-Max",
+          "from_rank": 16,
+          "to_rank": 17
+        },
+        {
+          "model_name": "Muse Spark 1.2 (xHigh)",
+          "from_rank": 17,
+          "to_rank": 18
+        },
+        {
+          "model_name": "Claude Opus 4.7",
+          "from_rank": 18,
           "to_rank": 19
+        },
+        {
+          "model_name": "Gemini 3.5 Flash (High)",
+          "from_rank": 19,
+          "to_rank": 20
         }
       ],
       "entered": [
         {
-          "model_name": "DeepSeek-V4.1-Flash-20260910 (Max)",
-          "rank": 20
+          "model_name": "Gemini 4 Hydrogen (High)",
+          "rank": 8
         }
       ],
       "dropped": [
         {
-          "model_name": "Claude Opus 4.5 (High, 32K, 20251101)",
+          "model_name": "Gemini 3.1 Pro Preview",
+          "last_rank": 20
+        }
+      ]
+    },
+    "coding": {
+      "moved": [
+        {
+          "model_name": "Muse Spark 1.2 (xHigh)",
+          "from_rank": 17,
+          "to_rank": 19
+        },
+        {
+          "model_name": "Muse Wonder (Max)",
+          "from_rank": 12,
+          "to_rank": 13
+        },
+        {
+          "model_name": "Claude Opus 4.7",
+          "from_rank": 13,
+          "to_rank": 14
+        },
+        {
+          "model_name": "Gemini 3.8 Flash (High)",
+          "from_rank": 14,
+          "to_rank": 15
+        },
+        {
+          "model_name": "GLM-5.3-Flash",
+          "from_rank": 15,
+          "to_rank": 16
+        },
+        {
+          "model_name": "Muse Spark 1.3 (Max)",
+          "from_rank": 16,
+          "to_rank": 17
+        }
+      ],
+      "entered": [
+        {
+          "model_name": "Gemini 4 Hydrogen (High)",
+          "rank": 12
+        }
+      ],
+      "dropped": [
+        {
+          "model_name": "Claude Sonnet 4.6",
           "last_rank": 19
         }
       ]
@@ -494,28 +544,68 @@
     "math": {
       "moved": [
         {
-          "model_name": "Claude Fable 5.1 (Max)",
+          "model_name": "Gemini 3.5 Flash (High)",
+          "from_rank": 12,
+          "to_rank": 14
+        },
+        {
+          "model_name": "Claude Opus 5 (Max)",
           "from_rank": 4,
           "to_rank": 3
         },
         {
-          "model_name": "Claude Opus 5 (Max)",
+          "model_name": "Claude Fable 5.1 (Max)",
           "from_rank": 3,
           "to_rank": 4
         },
         {
-          "model_name": "Gemini 3.5 Flash (High)",
-          "from_rank": 13,
+          "model_name": "Gemini 3.7 Flash (High)",
+          "from_rank": 11,
           "to_rank": 12
         },
         {
-          "model_name": "Gemini 3.6 Flash (High)",
-          "from_rank": 12,
-          "to_rank": 13
+          "model_name": "GLM-5.3-Flash",
+          "from_rank": 14,
+          "to_rank": 15
+        },
+        {
+          "model_name": "GLM-5.3 (Max)",
+          "from_rank": 15,
+          "to_rank": 16
+        },
+        {
+          "model_name": "Claude Opus 4.7 (High)",
+          "from_rank": 16,
+          "to_rank": 17
+        },
+        {
+          "model_name": "Muse Spark 1.3 (Max)",
+          "from_rank": 17,
+          "to_rank": 18
+        },
+        {
+          "model_name": "Kimi K3 (Max)",
+          "from_rank": 18,
+          "to_rank": 19
+        },
+        {
+          "model_name": "MiMo-V2.6-Pro",
+          "from_rank": 19,
+          "to_rank": 20
         }
       ],
-      "entered": [],
-      "dropped": []
+      "entered": [
+        {
+          "model_name": "Gemini 4 Hydrogen (High)",
+          "rank": 11
+        }
+      ],
+      "dropped": [
+        {
+          "model_name": "Claude Opus 4.7",
+          "last_rank": 20
+        }
+      ]
     }
   }
 }
